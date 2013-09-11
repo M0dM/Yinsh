@@ -1,5 +1,5 @@
 import junit.framework.TestCase;
-
+//Story 1 tests
 
 public class ColorTest extends TestCase
 {
@@ -7,9 +7,9 @@ public class ColorTest extends TestCase
 		super(name);
 	}
 	
-	public void testColor(){
+	public void testColor() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException{
 		Yinsh yinsh = new Yinsh();
-		
-		assertTrue(yinsh.currentColor() == yinsh.currentColor().BLACK);
+		yinsh.putRing('a', 2, Yinsh.color.BLACK);
+		assertTrue(yinsh.currentColor() == Yinsh.color.BLACK);
 	}
 }
