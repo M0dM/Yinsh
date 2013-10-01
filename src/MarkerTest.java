@@ -22,7 +22,7 @@ public class MarkerTest extends TestCase{
 		yinsh.putMarker('d', 2, Yinsh.color.BLACK);
 	}
 	
-	public void testMoveMarker() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, RingAlreadyInIntersectionException {
+	public void testMoveMarker() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, RingAlreadyInIntersectionException, NoSameColomnOrLineException {
 		Yinsh yinsh = new Yinsh();
 		yinsh.putRing('d', 2, Yinsh.color.BLACK);
 		yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -60,7 +60,7 @@ public class MarkerTest extends TestCase{
 		
 	}
 	
-	public void testNoMatchedRing() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, RingAlreadyInIntersectionException{
+	public void testNoMatchedRing() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, RingAlreadyInIntersectionException, NoSameColomnOrLineException{
 		Yinsh yinsh = new Yinsh();
 		yinsh.putRing('d', 2, Yinsh.color.BLACK);
 		yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -82,7 +82,7 @@ public class MarkerTest extends TestCase{
 		}
 	}
 	
-	public void testRingAlreadyInIntersection() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException{
+	public void testRingAlreadyInIntersection() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, NoSameColomnOrLineException{
 		Yinsh yinsh = new Yinsh();
 		yinsh.putRing('d', 2, Yinsh.color.BLACK);
 		yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -102,4 +102,27 @@ public class MarkerTest extends TestCase{
 			assertTrue(true);			
 		}
 	}
+	
+	public void testNoSameColomnOrLine() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, RingAlreadyInIntersectionException{
+		Yinsh yinsh = new Yinsh();
+		yinsh.putRing('d', 2, Yinsh.color.BLACK);
+		yinsh.putRing('c', 2, Yinsh.color.WHITE);
+		yinsh.putRing('b', 1, Yinsh.color.BLACK);
+		yinsh.putRing('b', 2, Yinsh.color.WHITE);
+		yinsh.putRing('f', 7, Yinsh.color.BLACK);
+		yinsh.putRing('d', 6, Yinsh.color.WHITE);
+		yinsh.putRing('g', 9, Yinsh.color.BLACK);
+		yinsh.putRing('g', 8, Yinsh.color.WHITE);
+		yinsh.putRing('j', 8, Yinsh.color.BLACK);
+		yinsh.putRing('h', 6, Yinsh.color.WHITE);
+		try{
+			yinsh.move_ring('d', 2, 'i', 7);
+			assertTrue(false);
+		}catch(NoSameColomnOrLineException exception)
+		{
+			assertTrue(true);			
+		}
+	}
+	
+	
 }

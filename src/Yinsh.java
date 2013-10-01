@@ -116,16 +116,25 @@ public class Yinsh {
 		return numberOfBlackRings == 5 && numberOfWhiteRings == 5;
 	}
 
-	public void move_ring(char colInitiale, int ligneInitale, char colFinale, int ligneFinale) throws RingAlreadyInIntersectionException {
+	public void move_ring(char colInitiale, int ligneInitale, char colFinale, int ligneFinale) throws RingAlreadyInIntersectionException, NoSameColomnOrLineException {
 		if(hasRing(colFinale, ligneFinale)){
 			throw new RingAlreadyInIntersectionException();
 		}
 		else{
-			((Vector<Intersection>)plate.get((int)colInitiale-'a')).get(ligneInitale-1).setState(Yinsh.state.MARKER);
-			Yinsh.color oldColor = ((Vector<Intersection>)plate.get((int)colInitiale-'a')).get(ligneInitale-1).getColor();
-			((Vector<Intersection>)plate.get((int)colFinale-'a')).get(ligneFinale-1).setState(Yinsh.state.RING);
-			((Vector<Intersection>)plate.get((int)colFinale-'a')).get(ligneFinale-1).setColor(oldColor);
+			if(sameColomnOrLine(colInitiale, ligneInitale, colFinale, ligneFinale)){
+				((Vector<Intersection>)plate.get((int)colInitiale-'a')).get(ligneInitale-1).setState(Yinsh.state.MARKER);
+				Yinsh.color oldColor = ((Vector<Intersection>)plate.get((int)colInitiale-'a')).get(ligneInitale-1).getColor();
+				((Vector<Intersection>)plate.get((int)colFinale-'a')).get(ligneFinale-1).setState(Yinsh.state.RING);
+				((Vector<Intersection>)plate.get((int)colFinale-'a')).get(ligneFinale-1).setColor(oldColor);
+			}
+			else{
+				throw new NoSameColomnOrLineException();
+			}
 		}
+	}
+
+	private boolean sameColomnOrLine(char colInitiale, int ligneInitale, char colFinale, int ligneFinale) {
+		return colInitiale == colFinale || ligneInitale == ligneFinale;
 	}
 	
 }
