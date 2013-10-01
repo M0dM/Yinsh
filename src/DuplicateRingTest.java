@@ -1,6 +1,5 @@
 
 import junit.framework.TestCase;
-import junit.framework.TestCase;
 // Story 3 tests
 
 	public class DuplicateRingTest extends TestCase

@@ -12,6 +12,7 @@ public class AllTests {
 		suite.addTest(new TestSuite(DuplicateRingTest.class));
 		suite.addTest(new TestSuite(InitializationTest.class));
 		suite.addTest(new TestSuite(MarkerTest.class));
+		suite.addTest(new TestSuite(FirstMovesTest.class));
 		return suite;
 	}
 	
