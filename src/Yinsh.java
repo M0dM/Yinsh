@@ -62,17 +62,26 @@ public class Yinsh {
 		}
 	}
 	
-	public void putMarker(char colone, int ligne, color color){
-		if(!hasRing(colone, ligne)){
-			setIntersection(colone, ligne, new Intersection(color, state.MARKER));
-		}
-		else{
-			setIntersection(colone, ligne, new Intersection(color, state.BOTH));
-		}
+	public void putMarker(char colone, int ligne, color color) throws NoMatchedRingException, InvalidRingColorException{
+		
+			if(hasRingWithWrongColor(colone, ligne, color)){
+				throw new InvalidRingColorException();
+			}
+			else if(hasRing(colone, ligne)){
+				setIntersection(colone, ligne, new Intersection(color, state.MARKER));
+			}
+			else{
+				throw new NoMatchedRingException();
+			}
 	}
 	
 	public boolean hasRing(char colone, int ligne){
-		return ((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).getColor() != Yinsh.color.UNDEFINED;
+		return ((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).getState() == Yinsh.state.RING;
+	}
+	
+	private boolean hasRingWithWrongColor(char colone, int ligne, color color) {
+		return ((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).getState() == Yinsh.state.RING && 
+			((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).getColor() != color;
 	}
 	
 	public boolean hasRingOnPlate(){
@@ -105,6 +114,18 @@ public class Yinsh {
 	
 	public boolean isInitialized(){
 		return numberOfBlackRings == 5 && numberOfWhiteRings == 5;
+	}
+
+	public void move_ring(char colInitiale, int ligneInitale, char colFinale, int ligneFinale) throws RingAlreadyInIntersectionException {
+		if(hasRing(colFinale, ligneFinale)){
+			throw new RingAlreadyInIntersectionException();
+		}
+		else{
+			((Vector<Intersection>)plate.get((int)colInitiale-'a')).get(ligneInitale-1).setState(Yinsh.state.MARKER);
+			Yinsh.color oldColor = ((Vector<Intersection>)plate.get((int)colInitiale-'a')).get(ligneInitale-1).getColor();
+			((Vector<Intersection>)plate.get((int)colFinale-'a')).get(ligneFinale-1).setState(Yinsh.state.RING);
+			((Vector<Intersection>)plate.get((int)colFinale-'a')).get(ligneFinale-1).setColor(oldColor);
+		}
 	}
 	
 }
