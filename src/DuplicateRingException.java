@@ -1,8 +1,8 @@
 
-public class DuplicateRingException extends Exception{
+public class DuplicateRingException extends Exception {
 
-	public DuplicateRingException(){
-		
-	}
-	
+    public DuplicateRingException() {
+
+    }
+
 }
