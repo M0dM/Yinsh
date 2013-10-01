@@ -1,27 +1,41 @@
+import java.util.HashMap;
+import java.util.Vector;
+
 
 public class Yinsh {
 
-	public enum color{ BLACK, WHITE };
+	public enum color{ BLACK, WHITE, UNDEFINED };
+	public enum state{ RING, MARKER, BOTH };
 	
 	private color currentColor;
 	private int numberOfRings;
-	private color[][] plate;
-	private int numberOfWhiteRings = 0;
-	private int numberOfBlackRings = 0;
+	private HashMap plate = new HashMap(); 
+	private int numberOfWhiteRings;
+	private int numberOfBlackRings;
 	private int[] ligneMin = { 2, 1, 1, 1, 1,  2,  2,  3,  4,  5,  7 };
 	private int[] ligneMax = { 5, 7, 8, 9, 10, 10, 11, 11, 11, 11, 10 };
 	
 	public Yinsh(){
 		this.numberOfRings = 0;
+		this.numberOfBlackRings = 0;
+		this.numberOfWhiteRings = 0;
 		this.currentColor = null;
-		plate = new color[10][10];
+		for (int i = 0; i < 10; i++) {
+			Integer index = new Integer(i);
+			Vector<Intersection> ligne = new Vector<Intersection>();
+			for (int j = 0; j < 10; j++) {
+				 Intersection intersect = new Intersection(color.UNDEFINED, null);
+				 ligne.add(intersect);
+			}
+			plate.put(index, ligne);
+		}
 	}
 	
 	public color currentColor(){
 		return this.currentColor;
 	}
 	
-	public void putRing(char colone, int ligne, color ringColor) throws DuplicateRingException, InvalidCoordinateException, InvalidColorException{
+	public void putRing(char colone, int ligne, color color) throws DuplicateRingException, InvalidCoordinateException, InvalidColorException{
 		if(!hasCoordinates(colone, ligne)){
 			throw new InvalidCoordinateException();
 		}
@@ -30,26 +44,35 @@ public class Yinsh {
 				throw new DuplicateRingException();
 			}
 			else{
-				if(currentColor == ringColor) {
+				if(currentColor == color) {
 					throw new InvalidColorException();
 				}
 				else{
-					currentColor = ringColor;
+					currentColor = color;
 				}
 				numberOfRings++;
-				if(ringColor == color.BLACK){
+				if(color == Yinsh.color.BLACK){
 					numberOfBlackRings++;
 				}
 				else{
 					numberOfWhiteRings++;
 				}
-				setPlate(colone, ligne, ringColor);
+				setIntersection(colone, ligne, new Intersection(color, state.RING));
 			}
 		}
 	}
 	
+	public void putMarker(char colone, int ligne, color color){
+		if(!hasRing(colone, ligne)){
+			setIntersection(colone, ligne, new Intersection(color, state.MARKER));
+		}
+		else{
+			setIntersection(colone, ligne, new Intersection(color, state.BOTH));
+		}
+	}
+	
 	public boolean hasRing(char colone, int ligne){
-		return plate[(int)colone-'a'][ligne-1] != null;
+		return ((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).getColor() != Yinsh.color.UNDEFINED;
 	}
 	
 	public boolean hasRingOnPlate(){
@@ -75,8 +98,9 @@ public class Yinsh {
 		return true;
 	}
 
-	public void setPlate(char colone, int ligne, color value){
-		plate[(int)colone-97][ligne-1] = value;
+	public void setIntersection(char colone, int ligne, Intersection value){
+		((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).setState(value.getState());
+		((Vector<Intersection>)plate.get((int)colone-'a')).get(ligne-1).setColor(value.getColor());
 	}
 	
 	public boolean isInitialized(){
