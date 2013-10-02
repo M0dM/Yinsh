@@ -4,13 +4,8 @@ import java.util.Vector;
 
 public class Yinsh {
 
-    public enum color {BLACK, WHITE, UNDEFINED}
-
-    ;
-
-    public enum state {RING, MARKER, BOTH}
-
-    ;
+    public enum color {BLACK, WHITE, UNDEFINED};
+    public enum state {RING, MARKER, BOTH};
 
     private color currentColor;
     private int numberOfRings;
@@ -65,6 +60,10 @@ public class Yinsh {
         //Colone i
         ((Vector<Intersection>) plate.get(8)).get(5).setColor(color.BLACK);
         ((Vector<Intersection>) plate.get(8)).get(5).setState(state.MARKER);
+    }
+
+    public HashMap getPlate() {
+        return plate;
     }
 
     public color currentColor() {
