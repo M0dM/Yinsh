@@ -33,33 +33,33 @@ public class Yinsh {
 
     public void setPlateauStory6() {
         // Colonne e
-        ((Vector<Intersection>) plate.get(4)).get(3).setColor(color.WHITE);
-        ((Vector<Intersection>) plate.get(4)).get(3).setState(state.MARKER);
+        ((Vector<Intersection>) plate.get(4)).get(2).setColor(color.WHITE);
+        ((Vector<Intersection>) plate.get(4)).get(2).setState(state.MARKER);
+        ((Vector<Intersection>) plate.get(4)).get(3).setColor(color.BLACK);
+        ((Vector<Intersection>) plate.get(4)).get(3).setState(state.RING);
         ((Vector<Intersection>) plate.get(4)).get(4).setColor(color.BLACK);
-        ((Vector<Intersection>) plate.get(4)).get(4).setState(state.RING);
-        ((Vector<Intersection>) plate.get(4)).get(5).setColor(color.BLACK);
+        ((Vector<Intersection>) plate.get(4)).get(4).setState(state.MARKER);
+        ((Vector<Intersection>) plate.get(4)).get(5).setColor(color.WHITE);
         ((Vector<Intersection>) plate.get(4)).get(5).setState(state.MARKER);
         ((Vector<Intersection>) plate.get(4)).get(6).setColor(color.WHITE);
         ((Vector<Intersection>) plate.get(4)).get(6).setState(state.MARKER);
-        ((Vector<Intersection>) plate.get(4)).get(7).setColor(color.WHITE);
+        ((Vector<Intersection>) plate.get(4)).get(7).setColor(color.BLACK);
         ((Vector<Intersection>) plate.get(4)).get(7).setState(state.MARKER);
-        ((Vector<Intersection>) plate.get(4)).get(8).setColor(color.BLACK);
+        ((Vector<Intersection>) plate.get(4)).get(8).setColor(color.WHITE);
         ((Vector<Intersection>) plate.get(4)).get(8).setState(state.MARKER);
-        ((Vector<Intersection>) plate.get(4)).get(9).setColor(color.WHITE);
-        ((Vector<Intersection>) plate.get(4)).get(9).setState(state.MARKER);
 
         //Colone b
-        ((Vector<Intersection>) plate.get(2)).get(4).setColor(color.WHITE);
-        ((Vector<Intersection>) plate.get(2)).get(4).setState(state.RING);
+        ((Vector<Intersection>) plate.get(1)).get(3).setColor(color.WHITE);
+        ((Vector<Intersection>) plate.get(1)).get(3).setState(state.RING);
         //Colone c
-        ((Vector<Intersection>) plate.get(3)).get(4).setColor(color.BLACK);
-        ((Vector<Intersection>) plate.get(3)).get(4).setState(state.MARKER);
+        ((Vector<Intersection>) plate.get(2)).get(3).setColor(color.BLACK);
+        ((Vector<Intersection>) plate.get(2)).get(3).setState(state.MARKER);
         //Colone h
-        ((Vector<Intersection>) plate.get(7)).get(5).setColor(color.WHITE);
-        ((Vector<Intersection>) plate.get(7)).get(5).setState(state.MARKER);
+        ((Vector<Intersection>) plate.get(7)).get(4).setColor(color.WHITE);
+        ((Vector<Intersection>) plate.get(7)).get(4).setState(state.MARKER);
         //Colone i
-        ((Vector<Intersection>) plate.get(8)).get(5).setColor(color.BLACK);
-        ((Vector<Intersection>) plate.get(8)).get(5).setState(state.MARKER);
+        ((Vector<Intersection>) plate.get(8)).get(4).setColor(color.BLACK);
+        ((Vector<Intersection>) plate.get(8)).get(4).setState(state.MARKER);
     }
 
     public HashMap getPlate() {
@@ -154,10 +154,24 @@ public class Yinsh {
                 Yinsh.color oldColor = ((Vector<Intersection>) plate.get((int) colInitiale - 'a')).get(ligneInitale - 1).getColor();
                 ((Vector<Intersection>) plate.get((int) colFinale - 'a')).get(ligneFinale - 1).setState(Yinsh.state.RING);
                 ((Vector<Intersection>) plate.get((int) colFinale - 'a')).get(ligneFinale - 1).setColor(oldColor);
+                for(int i=(int)colInitiale; i<(int)colFinale ;i++){
+                    for(int j=ligneInitale; j<ligneFinale; j++)
+                    ((Vector<Intersection>) plate.get('a'+i)).get(j).setColor(getOppositeColor(((Vector<Intersection>) plate.get('a'+i)).get(j).getColor()));
+                }
             } else {
                 throw new NoSameColomnOrLineException();
             }
         }
+    }
+
+    private color getOppositeColor(color color) {
+        if(color == Yinsh.color.BLACK){
+            return Yinsh.color.WHITE;
+        }
+        else if(color == Yinsh.color.WHITE){
+            return Yinsh.color.BLACK;
+        }
+        return color;
     }
 
     private boolean sameColomnOrLine(char colInitiale, int ligneInitale, char colFinale, int ligneFinale) {
