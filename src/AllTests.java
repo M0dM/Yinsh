@@ -14,6 +14,7 @@ public class AllTests {
         suite.addTest(new TestSuite(MarkerTest.class));
         suite.addTest(new TestSuite(FirstMovesTest.class));
         suite.addTest(new TestSuite(WinPointsTest.class));
+        suite.addTest(new TestSuite(ListAvailableMovesTest.class));
         return suite;
     }
 

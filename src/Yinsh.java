@@ -263,4 +263,8 @@ public class Yinsh {
         return colInit == colFinale || lineInit == lineFinale;
     }
 
+    public boolean isPossibleMove(char colInit, int lineInit, char colFinale, int lineFinale){
+        return  true;
+    }
+
 }

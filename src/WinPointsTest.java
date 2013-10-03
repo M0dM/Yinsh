@@ -1,6 +1,4 @@
 import junit.framework.TestCase;
-
-import java.util.Vector;
 // Story 7 tests
 
 public class WinPointsTest extends TestCase {
