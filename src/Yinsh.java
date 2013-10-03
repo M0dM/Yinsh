@@ -5,11 +5,12 @@ import java.util.Vector;
 public class Yinsh {
 
     public enum color {BLACK, WHITE, UNDEFINED};
+
     public enum state {RING, MARKER, BOTH};
 
     private color currentColor;
     private int numberOfRings;
-    private HashMap plate = new HashMap();
+    private HashMap<Integer, Vector<Intersection>> plate = new HashMap<Integer, Vector<Intersection>>();
     private int numberOfWhiteRings;
     private int numberOfBlackRings;
     private int[] ligneMin = {2, 1, 1, 1, 1, 2, 2, 3, 4, 5, 7};
@@ -22,12 +23,12 @@ public class Yinsh {
         this.currentColor = null;
         for (int i = 0; i < 10; i++) {
             Integer index = new Integer(i);
-            Vector<Intersection> ligne = new Vector<Intersection>();
+            Vector<Intersection> line = new Vector<Intersection>();
             for (int j = 0; j < 10; j++) {
                 Intersection intersect = new Intersection(color.UNDEFINED, null);
-                ligne.add(intersect);
+                line.add(intersect);
             }
-            plate.put(index, ligne);
+            plate.put(index, line);
         }
     }
 
@@ -37,6 +38,9 @@ public class Yinsh {
         ((Vector<Intersection>) plate.get(4)).get(2).setState(state.MARKER);
         ((Vector<Intersection>) plate.get(4)).get(3).setColor(color.BLACK);
         ((Vector<Intersection>) plate.get(4)).get(3).setState(state.RING);
+        numberOfRings++;
+        numberOfBlackRings++;
+        currentColor = color.BLACK;
         ((Vector<Intersection>) plate.get(4)).get(4).setColor(color.BLACK);
         ((Vector<Intersection>) plate.get(4)).get(4).setState(state.MARKER);
         ((Vector<Intersection>) plate.get(4)).get(5).setColor(color.WHITE);
@@ -154,9 +158,13 @@ public class Yinsh {
                 Yinsh.color oldColor = ((Vector<Intersection>) plate.get((int) colInitiale - 'a')).get(ligneInitale - 1).getColor();
                 ((Vector<Intersection>) plate.get((int) colFinale - 'a')).get(ligneFinale - 1).setState(Yinsh.state.RING);
                 ((Vector<Intersection>) plate.get((int) colFinale - 'a')).get(ligneFinale - 1).setColor(oldColor);
-                for(int i=(int)colInitiale; i<(int)colFinale ;i++){
-                    for(int j=ligneInitale; j<ligneFinale; j++)
-                    ((Vector<Intersection>) plate.get('a'+i)).get(j).setColor(getOppositeColor(((Vector<Intersection>) plate.get('a'+i)).get(j).getColor()));
+                if(colInitiale == colFinale){
+                    for (int j = ligneInitale; j < ligneFinale; j++)
+                        ((Vector<Intersection>) plate.get((int)colInitiale-'a')).get(j).setColor(getOppositeColor(((Vector<Intersection>) plate.get((int)colInitiale-'a')).get(j).getColor()));
+                }
+                if(ligneInitale == ligneFinale){
+                    for (int i = (int) colInitiale; i < (int) colFinale; i++)
+                        ((Vector<Intersection>) plate.get((int)colInitiale-'a')).get(ligneInitale-1).setColor(getOppositeColor(((Vector<Intersection>) plate.get((int)colInitiale-'a')).get(ligneInitale-1).getColor()));
                 }
             } else {
                 throw new NoSameColomnOrLineException();
@@ -165,10 +173,9 @@ public class Yinsh {
     }
 
     private color getOppositeColor(color color) {
-        if(color == Yinsh.color.BLACK){
+        if (color == Yinsh.color.BLACK) {
             return Yinsh.color.WHITE;
-        }
-        else if(color == Yinsh.color.WHITE){
+        } else if (color == Yinsh.color.WHITE) {
             return Yinsh.color.BLACK;
         }
         return color;
