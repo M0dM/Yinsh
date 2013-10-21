@@ -6,7 +6,7 @@ public class ColorTest extends TestCase {
         super(name);
     }
 
-    public void testColor() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException {
+    public void testColor() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('a', 2, Yinsh.color.BLACK);
         assertTrue(yinsh.currentColor() == Yinsh.color.BLACK);

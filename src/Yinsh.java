@@ -4,17 +4,17 @@ import java.util.Vector;
 
 public class Yinsh {
 
-    public enum color {BLACK, WHITE, UNDEFINED};
+    public enum color {BLACK, WHITE, UNDEFINED}
 
-    public enum state {RING, MARKER, BOTH};
+    public enum state {RING, MARKER}
 
     private color currentColor;
     private int numberOfRings;
-    private HashMap<Integer, Vector<Intersection>> plate = new HashMap<Integer, Vector<Intersection>>();
+    private final HashMap<Integer, Vector<Intersection>> plate = new HashMap<Integer, Vector<Intersection>>();
     private int numberOfWhiteRings;
     private int numberOfBlackRings;
-    private int[] ligneMin = {2, 1, 1, 1, 1, 2, 2, 3, 4, 5, 7};
-    private int[] ligneMax = {5, 7, 8, 9, 10, 10, 11, 11, 11, 11, 10};
+    private final int[] ligneMin = {2, 1, 1, 1, 1, 2, 2, 3, 4, 5, 7};
+    private final int[] ligneMax = {5, 7, 8, 9, 10, 10, 11, 11, 11, 11, 10};
     private int blackPoints = 0;
     private int whitePoints = 0;
 
@@ -24,21 +24,24 @@ public class Yinsh {
         this.numberOfWhiteRings = 0;
         this.currentColor = null;
         for (int i = 0; i < 10; i++) {
-            Integer index = new Integer(i);
             Vector<Intersection> line = new Vector<Intersection>();
-            for (int j = 0; j < 10; j++) {
-                Intersection intersect = new Intersection(color.UNDEFINED, null);
-                line.add(intersect);
-            }
-            plate.put(index, line);
+            initLineIntersections(line);
+            plate.put(i, line);
         }
     }
 
-    public void incrementBlackPoints(){
+    void initLineIntersections(Vector<Intersection> line){
+        for (int i = 0; i < 10; i++) {
+            Intersection intersect = new Intersection(color.UNDEFINED, null);
+            line.add(intersect);
+        }
+    }
+
+    void incrementBlackPoints(){
         blackPoints++;
     }
 
-    public void incrementWhitePoints(){
+    void incrementWhitePoints(){
         whitePoints++;
     }
 
@@ -51,19 +54,19 @@ public class Yinsh {
     }
 
     public void setIntersectionColor(char col, int line, color color){
-        ((Vector<Intersection>) plate.get(col -'a')).get(line-1).setColor(color);
+        plate.get(col -'a').get(line - 1).setColor(color);
     }
 
     public void setIntersectionState(char col, int line, state state){
-        ((Vector<Intersection>) plate.get(col -'a')).get(line-1).setState(state);
+        plate.get(col -'a').get(line - 1).setState(state);
     }
 
     public color getIntersectionColor(char col, int line){
-        return ((Vector<Intersection>) plate.get(col -'a')).get(line-1).getColor();
+        return plate.get(col -'a').get(line - 1).getColor();
     }
 
     public state getIntersectionState(char col, int line){
-        return ((Vector<Intersection>) plate.get(col -'a')).get(line-1).getState();
+        return plate.get(col -'a').get(line - 1).getState();
     }
 
     public void setCurrentColor(color color) {
@@ -82,18 +85,26 @@ public class Yinsh {
         numberOfWhiteRings++;
     }
 
+    void removeCol(char col, int lineInit, int lineFinale){
+        for (int j = lineInit; j < lineFinale; j++){
+            setIntersectionColor(col, j, color.UNDEFINED);
+            setIntersectionState(col, j, null);
+        }
+    }
+
+    void removeLine(int line, char colInit, char colFinale){
+        for (int i = (int)colInit; i < (int)colFinale; i++){
+            setIntersectionColor((char)(i + 'a'), line, color.UNDEFINED);
+            setIntersectionState((char)(i + 'a'), line, null);
+        }
+    }
+
     public void removeRow(char colInit, int lineInit, char colFinale, int lineFinale) {
         if(colInit == colFinale){
-            for (int j = lineInit; j < lineFinale; j++){
-                setIntersectionColor(colInit, j, color.UNDEFINED);
-                setIntersectionState(colInit, j, null);
-            }
+            removeCol(colInit, lineInit, lineFinale);
         }
         else if(lineInit == lineFinale){
-            for (int i = (int)colInit; i < (int)colFinale; i++){
-                setIntersectionColor((char)(i + 'a'), lineInit, color.UNDEFINED);
-                setIntersectionState((char)(i + 'a'), lineInit, null);
-            }
+            removeLine(lineInit, colInit, colFinale);
         }
         else{
             if(colFinale > colInit){
@@ -144,23 +155,19 @@ public class Yinsh {
         resetIntersect(col, line);
     }
 
-    public HashMap getPlate() {
-        return plate;
-    }
-
     public color currentColor() {
         return this.currentColor;
     }
 
-    public void putRing(char col, int ligne, color color) throws DuplicateRingException, InvalidCoordinateException, InvalidColorException {
+    public void putRing(char col, int ligne, color color) throws Exception {
         if (!hasCoordinates(col, ligne)) {
-            throw new InvalidCoordinateException();
+            throw new Exception("Invalid coordinate.");
         } else {
             if (hasRing(col, ligne)) {
-                throw new DuplicateRingException();
+                throw new Exception("Duplicate ring.");
             } else {
                 if (currentColor == color) {
-                    throw new InvalidColorException();
+                    throw new Exception("Invalid color.");
                 } else {
                     currentColor = color;
                 }
@@ -175,24 +182,24 @@ public class Yinsh {
         }
     }
 
-    public void putMarker(char col, int ligne, color color) throws NoMatchedRingException, InvalidRingColorException {
+    public void putMarker(char col, int ligne, color color) throws Exception {
 
         if (hasRingWithWrongColor(col, ligne, color)) {
-            throw new InvalidRingColorException();
+            throw new Exception("Invalid ring color.");
         } else if (hasRing(col, ligne)) {
             setIntersection(col, ligne, new Intersection(color, state.MARKER));
         } else {
-            throw new NoMatchedRingException();
+            throw new Exception("No ring matched");
         }
     }
 
     public boolean hasRing(char col, int ligne) {
-        return ((Vector<Intersection>) plate.get((int) col - 'a')).get(ligne - 1).getState() == Yinsh.state.RING;
+        return plate.get((int) col - 'a').get(ligne - 1).getState() == Yinsh.state.RING;
     }
 
     private boolean hasRingWithWrongColor(char col, int ligne, color color) {
-        return ((Vector<Intersection>) plate.get((int) col - 'a')).get(ligne - 1).getState() == Yinsh.state.RING &&
-                ((Vector<Intersection>) plate.get((int) col - 'a')).get(ligne - 1).getColor() != color;
+        return plate.get((int) col - 'a').get(ligne - 1).getState() == Yinsh.state.RING &&
+                plate.get((int) col - 'a').get(ligne - 1).getColor() != color;
     }
 
     public boolean hasRingOnPlate() {
@@ -203,60 +210,57 @@ public class Yinsh {
         return this.numberOfRings;
     }
 
-    public boolean hasCoordinates(char col, int ligne) {
-        if (!colHasLigne(col, ligne)) {
-            return false;
-        }
-        return true;
+    boolean hasCoordinates(char col, int ligne) {
+       return(colHasLigne(col, ligne));
     }
 
     private boolean colHasLigne(char col, int ligne) {
+        Boolean colHasLigne = true;
         if (col < 'a' || col > 'k')
-            return false;
+            colHasLigne = false;
         if (ligne < ligneMin[(int) col - 'a'] || ligne > ligneMax[(int) col - 'a'])
-            return false;
-        return true;
+            colHasLigne = false;
+        return colHasLigne;
     }
 
-    public void setIntersection(char col, int ligne, Intersection value) {
-        ((Vector<Intersection>) plate.get((int) col - 'a')).get(ligne - 1).setState(value.getState());
-        ((Vector<Intersection>) plate.get((int) col - 'a')).get(ligne - 1).setColor(value.getColor());
+    void setIntersection(char col, int ligne, Intersection value) {
+        plate.get((int) col - 'a').get(ligne - 1).setState(value.getState());
+        plate.get((int) col - 'a').get(ligne - 1).setColor(value.getColor());
     }
 
     public boolean isInitialized() {
         return numberOfBlackRings == 5 && numberOfWhiteRings == 5;
     }
 
-    public void move_ring(char colInit, int lineInit, char colFinale, int lineFinale) throws RingAlreadyInIntersectionException, NoSameColomnOrLineException {
+    public void move_ring(char colInit, int lineInit, char colFinale, int lineFinale) throws Exception {
         if (hasRing(colFinale, lineFinale)) {
-            throw new RingAlreadyInIntersectionException();
+            throw new Exception("Ring already in intersection.");
         } else {
             if (sameColomnOrLine(colInit, lineInit, colFinale, lineFinale)) {
-                ((Vector<Intersection>) plate.get((int) colInit - 'a')).get(lineInit - 1).setState(Yinsh.state.MARKER);
-                Yinsh.color oldColor = ((Vector<Intersection>) plate.get((int) colInit - 'a')).get(lineInit - 1).getColor();
-                ((Vector<Intersection>) plate.get((int) colFinale - 'a')).get(lineFinale - 1).setState(Yinsh.state.RING);
-                ((Vector<Intersection>) plate.get((int) colFinale - 'a')).get(lineFinale - 1).setColor(oldColor);
+                setIntersectionState(colInit, lineInit, state.MARKER);
+                color oldColor = getIntersectionColor(colInit, lineInit);
+                setIntersectionState(colFinale, lineFinale, state.RING);
+                setIntersectionColor(colFinale, lineFinale, oldColor);
                 if(colInit == colFinale){
                     for (int j = lineInit; j < lineFinale; j++)
-                        ((Vector<Intersection>) plate.get((int)colInit-'a')).get(j).setColor(getOppositeColor(((Vector<Intersection>) plate.get((int)colInit-'a')).get(j).getColor()));
+                        plate.get((int)colInit-'a').get(j).setColor(getOppositeColor(plate.get((int)colInit-'a').get(j).getColor()));
                 }
                 if(lineInit == lineFinale){
                     for (int i = (int) colInit; i < (int) colFinale; i++)
-                        ((Vector<Intersection>) plate.get((int)colInit-'a')).get(lineInit-1).setColor(getOppositeColor(((Vector<Intersection>) plate.get((int)colInit-'a')).get(lineInit-1).getColor()));
+                        plate.get((int)colInit-'a').get(lineInit - 1).setColor(getOppositeColor(plate.get((int)colInit-'a').get(lineInit - 1).getColor()));
                 }
             } else {
-                throw new NoSameColomnOrLineException();
+                throw new Exception("No same colomn or line");
             }
         }
     }
 
     private color getOppositeColor(color color) {
-        if (color == Yinsh.color.BLACK) {
-            return Yinsh.color.WHITE;
-        } else if (color == Yinsh.color.WHITE) {
-            return Yinsh.color.BLACK;
+        Yinsh.color oppColor = Yinsh.color.WHITE;
+        if (color == Yinsh.color.WHITE) {
+            oppColor = Yinsh.color.BLACK;
         }
-        return color;
+        return oppColor;
     }
 
     private boolean sameColomnOrLine(char colInit, int lineInit, char colFinale, int lineFinale) {

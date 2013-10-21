@@ -7,7 +7,7 @@ public class MarkerTest extends TestCase {
         super(name);
     }
 
-    public void testPutMarker() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException {
+    public void testPutMarker() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('d', 2, Yinsh.color.BLACK);
         yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -22,7 +22,7 @@ public class MarkerTest extends TestCase {
         yinsh.putMarker('d', 2, Yinsh.color.BLACK);
     }
 
-    public void testMoveMarker() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, RingAlreadyInIntersectionException, NoSameColomnOrLineException {
+    public void testMoveMarker() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('d', 2, Yinsh.color.BLACK);
         yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -38,7 +38,7 @@ public class MarkerTest extends TestCase {
         yinsh.hasRing('d', 5);
     }
 
-    public void testInvalidRingColor() throws NoMatchedRingException, DuplicateRingException, InvalidCoordinateException, InvalidColorException, RingAlreadyInIntersectionException {
+    public void testInvalidRingColor() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('d', 2, Yinsh.color.BLACK);
         yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -53,13 +53,13 @@ public class MarkerTest extends TestCase {
         try {
             yinsh.putMarker('d', 2, Yinsh.color.WHITE);
             assertTrue(false);
-        } catch (InvalidRingColorException exception) {
+        } catch (Exception exception) {
             assertTrue(true);
         }
 
     }
 
-    public void testNoMatchedRing() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, RingAlreadyInIntersectionException, NoSameColomnOrLineException {
+    public void testNoMatchedRing() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('d', 2, Yinsh.color.BLACK);
         yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -75,12 +75,12 @@ public class MarkerTest extends TestCase {
         try {
             yinsh.putMarker('d', 3, Yinsh.color.BLACK);
             assertTrue(false);
-        } catch (NoMatchedRingException exception) {
+        } catch (Exception exception) {
             assertTrue(true);
         }
     }
 
-    public void testRingAlreadyInIntersection() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, NoSameColomnOrLineException {
+    public void testRingAlreadyInIntersection() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('d', 2, Yinsh.color.BLACK);
         yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -95,12 +95,12 @@ public class MarkerTest extends TestCase {
         try {
             yinsh.move_ring('d', 2, 'd', 6);
             assertTrue(false);
-        } catch (RingAlreadyInIntersectionException exception) {
+        } catch (Exception exception) {
             assertTrue(true);
         }
     }
 
-    public void testNoSameColomnOrLine() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException, NoMatchedRingException, InvalidRingColorException, RingAlreadyInIntersectionException {
+    public void testNoSameColomnOrLine() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('d', 2, Yinsh.color.BLACK);
         yinsh.putRing('c', 2, Yinsh.color.WHITE);
@@ -115,7 +115,7 @@ public class MarkerTest extends TestCase {
         try {
             yinsh.move_ring('d', 2, 'i', 7);
             assertTrue(false);
-        } catch (NoSameColomnOrLineException exception) {
+        } catch (Exception exception) {
             assertTrue(true);
         }
     }

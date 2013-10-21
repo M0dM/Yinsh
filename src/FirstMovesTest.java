@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class FirstMovesTest extends TestCase {
 
-    public void testMoveBlackRing() throws RingAlreadyInIntersectionException, NoSameColomnOrLineException, NoMatchedRingException, InvalidRingColorException {
+    public void testMoveBlackRing() throws Exception {
         Yinsh yinsh = new Yinsh();
         // init plate for test
         yinsh.setIntersectionColor('e', 3, Yinsh.color.WHITE);

@@ -7,13 +7,13 @@ public class DuplicateRingTest extends TestCase {
         super(name);
     }
 
-    public void testDuplicateRing() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException {
+    public void testDuplicateRing() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('a', 2, Yinsh.color.BLACK);
         try {
             yinsh.putRing('a', 2, Yinsh.color.WHITE);
             assertTrue(false);
-        } catch (DuplicateRingException exception) {
+        } catch (Exception exception) {
             assertTrue(true);
         }
 

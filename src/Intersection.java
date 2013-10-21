@@ -1,5 +1,5 @@
 
-public class Intersection {
+class Intersection {
 
     private Yinsh.color color;
     private Yinsh.state state;

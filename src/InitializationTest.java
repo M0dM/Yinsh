@@ -7,7 +7,7 @@ public class InitializationTest extends TestCase {
         super(name);
     }
 
-    public void testGameInitalized() throws DuplicateRingException, InvalidCoordinateException, InvalidColorException {
+    public void testGameInitalized() throws Exception {
         Yinsh yinsh = new Yinsh();
         yinsh.putRing('b', 1, Yinsh.color.BLACK);
         yinsh.putRing('c', 1, Yinsh.color.WHITE);
