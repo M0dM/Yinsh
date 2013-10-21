@@ -73,17 +73,17 @@ public class Yinsh {
         this.currentColor = color;
     }
 
-    public void incrementNumberOfRings() {
+
+    public void incrementRings(color color) {
+
+        if (color == Yinsh.color.BLACK) {
+            numberOfBlackRings++;
+        } else {
+            numberOfWhiteRings++;
+        }
         numberOfRings++;
     }
 
-    public void incrementNumberOfBlackRings() {
-        numberOfBlackRings++;
-    }
-
-    public void incrementNumberOfWhiteRings() {
-        numberOfWhiteRings++;
-    }
 
     void removeCol(char col, int lineInit, int lineFinale) {
         for (int j = lineInit; j < lineFinale; j++) {

@@ -3,7 +3,7 @@ import junit.framework.TestCase;
 
 public class WinPointsTest extends TestCase {
 
-    public void testRemoveRow(){
+    public void testRemoveRow() {
         Yinsh yinsh = new Yinsh();
         yinsh.setIntersectionColor('e', 6, Yinsh.color.BLACK);
         yinsh.setIntersectionState('e', 6, Yinsh.state.MARKER);
@@ -28,17 +28,17 @@ public class WinPointsTest extends TestCase {
                 && yinsh.getIntersectionState('i', 10) == null);
     }
 
-    public void testRemoveRing(){
+    public void testRemoveRing() {
         Yinsh yinsh = new Yinsh();
         yinsh.setIntersectionColor('h', 10, Yinsh.color.BLACK);
         yinsh.setIntersectionState('h', 10, Yinsh.state.RING);
-        yinsh.incrementNumberOfRings();
-        yinsh.incrementNumberOfBlackRings();
+        yinsh.incrementRings(Yinsh.color.UNDEFINED);
+        yinsh.incrementRings(Yinsh.color.UNDEFINED);
         int numberOfBlackPointsInit = yinsh.getBlackPoints();
         yinsh.removeRing('h', 10);
         int numberOfBlackPointsFinale = yinsh.getBlackPoints();
         assertTrue(yinsh.getIntersectionColor('h', 10) == Yinsh.color.UNDEFINED
                 && yinsh.getIntersectionState('h', 10) == null
-                && numberOfBlackPointsFinale-numberOfBlackPointsInit == 1);
+                && numberOfBlackPointsFinale - numberOfBlackPointsInit == 1);
     }
 }

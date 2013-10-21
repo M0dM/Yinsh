@@ -1,6 +1,4 @@
 import junit.framework.TestCase;
-
-import java.util.Vector;
 // Story 6 tests
 
 public class FirstMovesTest extends TestCase {
@@ -12,8 +10,8 @@ public class FirstMovesTest extends TestCase {
         yinsh.setIntersectionState('e', 3, Yinsh.state.MARKER);
         yinsh.setIntersectionColor('e', 4, Yinsh.color.BLACK);
         yinsh.setIntersectionState('e', 4, Yinsh.state.RING);
-        yinsh.incrementNumberOfRings();
-        yinsh.incrementNumberOfBlackRings();
+        yinsh.incrementRings(Yinsh.color.UNDEFINED);
+        yinsh.incrementRings(Yinsh.color.UNDEFINED);
         yinsh.setCurrentColor(Yinsh.color.BLACK);
         yinsh.setIntersectionColor('e', 5, Yinsh.color.BLACK);
         yinsh.setIntersectionState('e', 5, Yinsh.state.MARKER);
