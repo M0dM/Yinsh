@@ -99,6 +99,34 @@ public class Yinsh {
         }
     }
 
+    void resetLineIntersect (char col, int firstLine, int lastLine){
+        for(int j= firstLine; j<=lastLine ;j++){
+            resetIntersect(col, j);
+        }
+    }
+
+    void removeDiagFromTopToBot(char colInit, char colFinale, int lineInit, int lineFinale){
+        for(int i=(int)colInit; i<=colFinale ;i++){
+            if(lineFinale > lineInit){
+                resetLineIntersect((char)i, lineInit, lineFinale);
+            }
+            else{
+                resetLineIntersect((char)i, lineFinale, lineInit);
+            }
+        }
+    }
+
+    void removeDiagFromBotTotTop(char colInit, char colFinale, int lineInit, int lineFinale){
+        for(int i=(int)colFinale; i<=colInit ;i++){
+            if(lineFinale > lineInit){
+                resetLineIntersect((char)i, lineInit, lineFinale);
+            }
+            else{
+                resetLineIntersect((char)i, lineFinale, lineInit);
+            }
+        }
+    }
+
     public void removeRow(char colInit, int lineInit, char colFinale, int lineFinale) {
         if(colInit == colFinale){
             removeCol(colInit, lineInit, lineFinale);
@@ -108,32 +136,10 @@ public class Yinsh {
         }
         else{
             if(colFinale > colInit){
-                for(int i=(int)colInit; i<=colFinale ;i++){
-                    if(lineFinale > lineInit){
-                        for(int j= lineInit; j<=lineFinale ;j++){
-                           resetIntersect((char)i, j);
-                        }
-                    }
-                    else{
-                        for(int j= lineFinale; j<=lineInit ;j++){
-                            resetIntersect((char)i, j);
-                        }
-                    }
-                }
+                removeDiagFromTopToBot(colInit, colFinale, lineInit, lineFinale);
             }
             else{
-                for(int i=(int)colFinale; i<=colInit ;i++){
-                    if(lineFinale > lineInit){
-                        for(int j= lineInit; j<=lineFinale ;j++){
-                            resetIntersect((char)i, j);
-                        }
-                    }
-                    else{
-                        for(int j= lineFinale; j<=lineInit ;j++){
-                            resetIntersect((char)i, j);
-                        }
-                    }
-                }
+                removeDiagFromBotTotTop(colInit, colFinale, lineInit, lineFinale);
             }
         }
     }
