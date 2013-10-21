@@ -16,9 +16,9 @@ public class GameTest extends TestCase {
 
     public void testInitial() throws Exception {
         Yinsh yinsh = new Yinsh();
-        assertTrue(!yinsh.hasRingOnPlate());
+        assertTrue(yinsh.numberOfRings == 0);
         yinsh.putRing('a', 2, Yinsh.color.BLACK);
-        assertTrue(yinsh.getNumberOfRingsOnPlate() == 1);
+        assertTrue(yinsh.numberOfRings == 1);
     }
 
     public void testWrongCoord() throws Exception {

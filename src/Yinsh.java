@@ -9,7 +9,7 @@ public class Yinsh {
     public enum state {RING, MARKER}
 
     private color currentColor;
-    private int numberOfRings;
+    protected int numberOfRings;
     private final HashMap<Integer, Vector<Intersection>> plate = new HashMap<Integer, Vector<Intersection>>();
     private int numberOfWhiteRings;
     private int numberOfBlackRings;
@@ -36,44 +36,38 @@ public class Yinsh {
             line.add(intersect);
         }
     }
-
-    void incrementBlackPoints() {
-        blackPoints++;
+    void incrementPlayerPoints(color couleur){
+          if(couleur == color.BLACK){
+              blackPoints++;
+          }else{
+              whitePoints++;
+          }
     }
 
-    void incrementWhitePoints() {
-        whitePoints++;
+    public int getPlayerPoints(color couleur){
+        int points =0;
+        if(couleur == color.BLACK){
+            points = blackPoints;
+        }else{
+            points = whitePoints;
+        }
+        return points;
     }
-
-    public int getWhitePoints() {
-        return whitePoints;
-    }
-
-    public int getBlackPoints() {
-        return blackPoints;
-    }
-
     public void setIntersectionColor(char col, int line, color color) {
         plate.get(col - 'a').get(line - 1).setColor(color);
     }
-
     public void setIntersectionState(char col, int line, state state) {
         plate.get(col - 'a').get(line - 1).setState(state);
     }
-
     public color getIntersectionColor(char col, int line) {
         return plate.get(col - 'a').get(line - 1).getColor();
     }
-
     public state getIntersectionState(char col, int line) {
         return plate.get(col - 'a').get(line - 1).getState();
     }
-
     public void setCurrentColor(color color) {
         this.currentColor = color;
     }
-
-
     public void incrementRings(color color) {
 
         if (color == Yinsh.color.BLACK) {
@@ -148,9 +142,9 @@ public class Yinsh {
         numberOfBlackRings--;
         numberOfRings--;
         if (getIntersectionColor(col, line) == color.BLACK) {
-            incrementBlackPoints();
+            incrementPlayerPoints(color.BLACK);
         } else {
-            incrementWhitePoints();
+            incrementPlayerPoints(color.WHITE);
         }
         resetIntersect(col, line);
     }
@@ -200,14 +194,6 @@ public class Yinsh {
     private boolean hasRingWithWrongColor(char col, int ligne, color color) {
         return plate.get((int) col - 'a').get(ligne - 1).getState() == Yinsh.state.RING &&
                 plate.get((int) col - 'a').get(ligne - 1).getColor() != color;
-    }
-
-    public boolean hasRingOnPlate() {
-        return (numberOfRings > 0);
-    }
-
-    public int getNumberOfRingsOnPlate() {
-        return this.numberOfRings;
     }
 
     boolean hasCoordinates(char col, int ligne) {

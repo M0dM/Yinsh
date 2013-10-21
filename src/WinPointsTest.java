@@ -34,9 +34,9 @@ public class WinPointsTest extends TestCase {
         yinsh.setIntersectionState('h', 10, Yinsh.state.RING);
         yinsh.incrementRings(Yinsh.color.UNDEFINED);
         yinsh.incrementRings(Yinsh.color.UNDEFINED);
-        int numberOfBlackPointsInit = yinsh.getBlackPoints();
+        int numberOfBlackPointsInit = yinsh.getPlayerPoints(Yinsh.color.BLACK);
         yinsh.removeRing('h', 10);
-        int numberOfBlackPointsFinale = yinsh.getBlackPoints();
+        int numberOfBlackPointsFinale = yinsh.getPlayerPoints(Yinsh.color.BLACK);
         assertTrue(yinsh.getIntersectionColor('h', 10) == Yinsh.color.UNDEFINED
                 && yinsh.getIntersectionState('h', 10) == null
                 && numberOfBlackPointsFinale - numberOfBlackPointsInit == 1);
