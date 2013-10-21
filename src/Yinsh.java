@@ -30,43 +30,43 @@ public class Yinsh {
         }
     }
 
-    void initLineIntersections(Vector<Intersection> line){
+    void initLineIntersections(Vector<Intersection> line) {
         for (int i = 0; i < 10; i++) {
             Intersection intersect = new Intersection(color.UNDEFINED, null);
             line.add(intersect);
         }
     }
 
-    void incrementBlackPoints(){
+    void incrementBlackPoints() {
         blackPoints++;
     }
 
-    void incrementWhitePoints(){
+    void incrementWhitePoints() {
         whitePoints++;
     }
 
-    public int getWhitePoints(){
+    public int getWhitePoints() {
         return whitePoints;
     }
 
-    public int getBlackPoints(){
+    public int getBlackPoints() {
         return blackPoints;
     }
 
-    public void setIntersectionColor(char col, int line, color color){
-        plate.get(col -'a').get(line - 1).setColor(color);
+    public void setIntersectionColor(char col, int line, color color) {
+        plate.get(col - 'a').get(line - 1).setColor(color);
     }
 
-    public void setIntersectionState(char col, int line, state state){
-        plate.get(col -'a').get(line - 1).setState(state);
+    public void setIntersectionState(char col, int line, state state) {
+        plate.get(col - 'a').get(line - 1).setState(state);
     }
 
-    public color getIntersectionColor(char col, int line){
-        return plate.get(col -'a').get(line - 1).getColor();
+    public color getIntersectionColor(char col, int line) {
+        return plate.get(col - 'a').get(line - 1).getColor();
     }
 
-    public state getIntersectionState(char col, int line){
-        return plate.get(col -'a').get(line - 1).getState();
+    public state getIntersectionState(char col, int line) {
+        return plate.get(col - 'a').get(line - 1).getState();
     }
 
     public void setCurrentColor(color color) {
@@ -77,68 +77,63 @@ public class Yinsh {
         numberOfRings++;
     }
 
-    public void incrementNumberOfBlackRings(){
+    public void incrementNumberOfBlackRings() {
         numberOfBlackRings++;
     }
 
-    public void incrementNumberOfWhiteRings(){
+    public void incrementNumberOfWhiteRings() {
         numberOfWhiteRings++;
     }
 
-    void removeCol(char col, int lineInit, int lineFinale){
-        for (int j = lineInit; j < lineFinale; j++){
+    void removeCol(char col, int lineInit, int lineFinale) {
+        for (int j = lineInit; j < lineFinale; j++) {
             setIntersectionColor(col, j, color.UNDEFINED);
             setIntersectionState(col, j, null);
         }
     }
 
-    void removeLine(int line, char colInit, char colFinale){
-        for (int i = (int)colInit; i < (int)colFinale; i++){
-            setIntersectionColor((char)(i + 'a'), line, color.UNDEFINED);
-            setIntersectionState((char)(i + 'a'), line, null);
+    void removeLine(int line, char colInit, char colFinale) {
+        for (int i = (int) colInit; i < (int) colFinale; i++) {
+            setIntersectionColor((char) (i + 'a'), line, color.UNDEFINED);
+            setIntersectionState((char) (i + 'a'), line, null);
         }
     }
 
-    void resetLineIntersect (char col, int firstLine, int lastLine){
-        for(int j= firstLine; j<=lastLine ;j++){
+    void resetLineIntersect(char col, int firstLine, int lastLine) {
+        for (int j = firstLine; j <= lastLine; j++) {
             resetIntersect(col, j);
         }
     }
 
-    void removeDiagFromTopToBot(char colInit, char colFinale, int lineInit, int lineFinale){
-        for(int i=(int)colInit; i<=colFinale ;i++){
-            if(lineFinale > lineInit){
-                resetLineIntersect((char)i, lineInit, lineFinale);
-            }
-            else{
-                resetLineIntersect((char)i, lineFinale, lineInit);
+    void removeDiagFromTopToBot(char colInit, char colFinale, int lineInit, int lineFinale) {
+        for (int i = (int) colInit; i <= colFinale; i++) {
+            if (lineFinale > lineInit) {
+                resetLineIntersect((char) i, lineInit, lineFinale);
+            } else {
+                resetLineIntersect((char) i, lineFinale, lineInit);
             }
         }
     }
 
-    void removeDiagFromBotTotTop(char colInit, char colFinale, int lineInit, int lineFinale){
-        for(int i=(int)colFinale; i<=colInit ;i++){
-            if(lineFinale > lineInit){
-                resetLineIntersect((char)i, lineInit, lineFinale);
-            }
-            else{
-                resetLineIntersect((char)i, lineFinale, lineInit);
+    void removeDiagFromBotTotTop(char colInit, char colFinale, int lineInit, int lineFinale) {
+        for (int i = (int) colFinale; i <= colInit; i++) {
+            if (lineFinale > lineInit) {
+                resetLineIntersect((char) i, lineInit, lineFinale);
+            } else {
+                resetLineIntersect((char) i, lineFinale, lineInit);
             }
         }
     }
 
     public void removeRow(char colInit, int lineInit, char colFinale, int lineFinale) {
-        if(colInit == colFinale){
+        if (colInit == colFinale) {
             removeCol(colInit, lineInit, lineFinale);
-        }
-        else if(lineInit == lineFinale){
+        } else if (lineInit == lineFinale) {
             removeLine(lineInit, colInit, colFinale);
-        }
-        else{
-            if(colFinale > colInit){
+        } else {
+            if (colFinale > colInit) {
                 removeDiagFromTopToBot(colInit, colFinale, lineInit, lineFinale);
-            }
-            else{
+            } else {
                 removeDiagFromBotTotTop(colInit, colFinale, lineInit, lineFinale);
             }
         }
@@ -152,10 +147,9 @@ public class Yinsh {
     public void removeRing(char col, int line) {
         numberOfBlackRings--;
         numberOfRings--;
-        if (getIntersectionColor(col,line) == color.BLACK){
+        if (getIntersectionColor(col, line) == color.BLACK) {
             incrementBlackPoints();
-        }
-        else{
+        } else {
             incrementWhitePoints();
         }
         resetIntersect(col, line);
@@ -217,7 +211,7 @@ public class Yinsh {
     }
 
     boolean hasCoordinates(char col, int ligne) {
-       return(colHasLigne(col, ligne));
+        return (colHasLigne(col, ligne));
     }
 
     private boolean colHasLigne(char col, int ligne) {
@@ -238,23 +232,28 @@ public class Yinsh {
         return numberOfBlackRings == 5 && numberOfWhiteRings == 5;
     }
 
+    void setInitColorForSameColomn(char colInit, int lineInit, int lineFinale) {
+        for (int j = lineInit; j < lineFinale; j++)
+            plate.get((int) colInit - 'a').get(j).setColor(getOppositeColor(plate.get((int) colInit - 'a').get(j).getColor()));
+    }
+
+    void setInitColorForSameLine(char colInit, char colFinale, int lineInit) {
+        for (int i = (int) colInit; i < (int) colFinale; i++)
+            plate.get((int) colInit - 'a').get(lineInit - 1).setColor(getOppositeColor(plate.get((int) colInit - 'a').get(lineInit - 1).getColor()));
+    }
+
     public void move_ring(char colInit, int lineInit, char colFinale, int lineFinale) throws Exception {
         if (hasRing(colFinale, lineFinale)) {
             throw new Exception("Ring already in intersection.");
         } else {
             if (sameColomnOrLine(colInit, lineInit, colFinale, lineFinale)) {
                 setIntersectionState(colInit, lineInit, state.MARKER);
-                color oldColor = getIntersectionColor(colInit, lineInit);
                 setIntersectionState(colFinale, lineFinale, state.RING);
-                setIntersectionColor(colFinale, lineFinale, oldColor);
-                if(colInit == colFinale){
-                    for (int j = lineInit; j < lineFinale; j++)
-                        plate.get((int)colInit-'a').get(j).setColor(getOppositeColor(plate.get((int)colInit-'a').get(j).getColor()));
-                }
-                if(lineInit == lineFinale){
-                    for (int i = (int) colInit; i < (int) colFinale; i++)
-                        plate.get((int)colInit-'a').get(lineInit - 1).setColor(getOppositeColor(plate.get((int)colInit-'a').get(lineInit - 1).getColor()));
-                }
+                setIntersectionColor(colFinale, lineFinale, getIntersectionColor(colInit, lineInit));
+                if (colInit == colFinale)
+                    setInitColorForSameColomn(colInit, lineInit, lineFinale);
+                if (lineInit == lineFinale)
+                    setInitColorForSameLine(colInit, colFinale, lineInit);
             } else {
                 throw new Exception("No same colomn or line");
             }
@@ -273,8 +272,8 @@ public class Yinsh {
         return colInit == colFinale || lineInit == lineFinale;
     }
 
-    public boolean isPossibleMove(char colInit, int lineInit, char colFinale, int lineFinale){
-        return  true;
+    public boolean isPossibleMove(char colInit, int lineInit, char colFinale, int lineFinale) {
+        return true;
     }
 
 }
