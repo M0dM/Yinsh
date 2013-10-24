@@ -1,0 +1,207 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: MarkerTest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: MarkerTest (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MarkerTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91,8%
+  </span>
+  <span class="absValue">
+    (90/ 98)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;import junit.framework.TestCase;
+<i>2</i>&nbsp;// Story 5 tests
+<i>3</i>&nbsp;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;public class MarkerTest extends TestCase {
+<i>6</i>&nbsp;    public MarkerTest(String name) {
+<b class="fc"><i>7</i>&nbsp;        super(name);</b>
+<b class="fc"><i>8</i>&nbsp;    }</b>
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;    public void testPutMarker() throws Exception {
+<b class="fc"><i>11</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>12</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>13</i>&nbsp;        yinsh.putRing(&#39;c&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>14</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 1, Yinsh.color.BLACK);</b>
+<b class="fc"><i>15</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>16</i>&nbsp;        yinsh.putRing(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>17</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>18</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>19</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 8, Yinsh.color.WHITE);</b>
+<b class="fc"><i>20</i>&nbsp;        yinsh.putRing(&#39;j&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>21</i>&nbsp;        yinsh.putRing(&#39;h&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>22</i>&nbsp;        yinsh.putMarker(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>23</i>&nbsp;    }</b>
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    public void testMoveMarker() throws Exception {
+<b class="fc"><i>26</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>27</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>28</i>&nbsp;        yinsh.putRing(&#39;c&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>29</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 1, Yinsh.color.BLACK);</b>
+<b class="fc"><i>30</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>31</i>&nbsp;        yinsh.putRing(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>32</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>33</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>34</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 8, Yinsh.color.WHITE);</b>
+<b class="fc"><i>35</i>&nbsp;        yinsh.putRing(&#39;j&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>36</i>&nbsp;        yinsh.putRing(&#39;h&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>37</i>&nbsp;        yinsh.move_ring(&#39;d&#39;, 2, &#39;d&#39;, 5);</b>
+<b class="fc"><i>38</i>&nbsp;        yinsh.hasRing(&#39;d&#39;, 5);</b>
+<b class="fc"><i>39</i>&nbsp;    }</b>
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    public void testInvalidRingColor() throws Exception {
+<b class="fc"><i>42</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>43</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>44</i>&nbsp;        yinsh.putRing(&#39;c&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>45</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 1, Yinsh.color.BLACK);</b>
+<b class="fc"><i>46</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>47</i>&nbsp;        yinsh.putRing(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>48</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>49</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>50</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 8, Yinsh.color.WHITE);</b>
+<b class="fc"><i>51</i>&nbsp;        yinsh.putRing(&#39;j&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>52</i>&nbsp;        yinsh.putRing(&#39;h&#39;, 6, Yinsh.color.WHITE);</b>
+<i>53</i>&nbsp;        try {
+<b class="fc"><i>54</i>&nbsp;            yinsh.putMarker(&#39;d&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="nc"><i>55</i>&nbsp;            assertTrue(false);</b>
+<b class="fc"><i>56</i>&nbsp;        } catch (Exception exception) {</b>
+<b class="fc"><i>57</i>&nbsp;            assertTrue(true);</b>
+<b class="nc"><i>58</i>&nbsp;        }</b>
+<i>59</i>&nbsp;
+<b class="fc"><i>60</i>&nbsp;    }</b>
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    public void testNoMatchedRing() throws Exception {
+<b class="fc"><i>63</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>64</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>65</i>&nbsp;        yinsh.putRing(&#39;c&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>66</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 1, Yinsh.color.BLACK);</b>
+<b class="fc"><i>67</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>68</i>&nbsp;        yinsh.putRing(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>69</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>70</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>71</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 8, Yinsh.color.WHITE);</b>
+<b class="fc"><i>72</i>&nbsp;        yinsh.putRing(&#39;j&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>73</i>&nbsp;        yinsh.putRing(&#39;h&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>74</i>&nbsp;        yinsh.move_ring(&#39;d&#39;, 2, &#39;d&#39;, 5);</b>
+<i>75</i>&nbsp;        try {
+<b class="fc"><i>76</i>&nbsp;            yinsh.putMarker(&#39;d&#39;, 3, Yinsh.color.BLACK);</b>
+<b class="nc"><i>77</i>&nbsp;            assertTrue(false);</b>
+<b class="fc"><i>78</i>&nbsp;        } catch (Exception exception) {</b>
+<b class="fc"><i>79</i>&nbsp;            assertTrue(true);</b>
+<b class="nc"><i>80</i>&nbsp;        }</b>
+<b class="fc"><i>81</i>&nbsp;    }</b>
+<i>82</i>&nbsp;
+<i>83</i>&nbsp;    public void testRingAlreadyInIntersection() throws Exception {
+<b class="fc"><i>84</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>85</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>86</i>&nbsp;        yinsh.putRing(&#39;c&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>87</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 1, Yinsh.color.BLACK);</b>
+<b class="fc"><i>88</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>89</i>&nbsp;        yinsh.putRing(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>90</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>91</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>92</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 8, Yinsh.color.WHITE);</b>
+<b class="fc"><i>93</i>&nbsp;        yinsh.putRing(&#39;j&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>94</i>&nbsp;        yinsh.putRing(&#39;h&#39;, 6, Yinsh.color.WHITE);</b>
+<i>95</i>&nbsp;        try {
+<b class="fc"><i>96</i>&nbsp;            yinsh.move_ring(&#39;d&#39;, 2, &#39;d&#39;, 6);</b>
+<b class="nc"><i>97</i>&nbsp;            assertTrue(false);</b>
+<b class="fc"><i>98</i>&nbsp;        } catch (Exception exception) {</b>
+<b class="fc"><i>99</i>&nbsp;            assertTrue(true);</b>
+<b class="nc"><i>100</i>&nbsp;        }</b>
+<b class="fc"><i>101</i>&nbsp;    }</b>
+<i>102</i>&nbsp;
+<i>103</i>&nbsp;    public void testNoSameColomnOrLine() throws Exception {
+<b class="fc"><i>104</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>105</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>106</i>&nbsp;        yinsh.putRing(&#39;c&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>107</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 1, Yinsh.color.BLACK);</b>
+<b class="fc"><i>108</i>&nbsp;        yinsh.putRing(&#39;b&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>109</i>&nbsp;        yinsh.putRing(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>110</i>&nbsp;        yinsh.putRing(&#39;d&#39;, 6, Yinsh.color.WHITE);</b>
+<b class="fc"><i>111</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>112</i>&nbsp;        yinsh.putRing(&#39;g&#39;, 8, Yinsh.color.WHITE);</b>
+<b class="fc"><i>113</i>&nbsp;        yinsh.putRing(&#39;j&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>114</i>&nbsp;        yinsh.putRing(&#39;h&#39;, 6, Yinsh.color.WHITE);</b>
+<i>115</i>&nbsp;        try {
+<b class="fc"><i>116</i>&nbsp;            yinsh.move_ring(&#39;d&#39;, 2, &#39;i&#39;, 7);</b>
+<b class="nc"><i>117</i>&nbsp;            assertTrue(false);</b>
+<b class="fc"><i>118</i>&nbsp;        } catch (Exception exception) {</b>
+<b class="fc"><i>119</i>&nbsp;            assertTrue(true);</b>
+<b class="nc"><i>120</i>&nbsp;        }</b>
+<b class="fc"><i>121</i>&nbsp;    }</b>
+<i>122</i>&nbsp;
+<i>123</i>&nbsp;
+<i>124</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2013-10-24 09:50</div>
+</div>
+</body>
+</html>

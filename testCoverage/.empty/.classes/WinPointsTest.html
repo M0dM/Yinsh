@@ -1,0 +1,127 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: WinPointsTest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: WinPointsTest (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WinPointsTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (25/ 25)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;import junit.framework.TestCase;
+<i>2</i>&nbsp;// Story 7 tests
+<i>3</i>&nbsp;
+<b class="fc"><i>4</i>&nbsp;public class WinPointsTest extends TestCase {</b>
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;    public void testRemoveRow() {
+<b class="fc"><i>7</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>8</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 6, Yinsh.color.BLACK);</b>
+<b class="fc"><i>9</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 6, Yinsh.state.MARKER);</b>
+<b class="fc"><i>10</i>&nbsp;        yinsh.setIntersectionColor(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
+<b class="fc"><i>11</i>&nbsp;        yinsh.setIntersectionState(&#39;f&#39;, 7, Yinsh.state.MARKER);</b>
+<b class="fc"><i>12</i>&nbsp;        yinsh.setIntersectionColor(&#39;g&#39;, 8, Yinsh.color.BLACK);</b>
+<b class="fc"><i>13</i>&nbsp;        yinsh.setIntersectionState(&#39;g&#39;, 8, Yinsh.state.MARKER);</b>
+<b class="fc"><i>14</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 9, Yinsh.color.BLACK);</b>
+<b class="fc"><i>15</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 9, Yinsh.state.MARKER);</b>
+<b class="fc"><i>16</i>&nbsp;        yinsh.setIntersectionColor(&#39;i&#39;, 10, Yinsh.color.BLACK);</b>
+<b class="fc"><i>17</i>&nbsp;        yinsh.setIntersectionState(&#39;i&#39;, 10, Yinsh.state.MARKER);</b>
+<b class="fc"><i>18</i>&nbsp;        yinsh.removeRow(&#39;e&#39;, 6, &#39;i&#39;, 10);</b>
+<b class="fc"><i>19</i>&nbsp;        assertTrue(yinsh.getIntersectionColor(&#39;e&#39;, 6) == Yinsh.color.UNDEFINED</b>
+<i>20</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;e&#39;, 6) == null
+<i>21</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;f&#39;, 7) == Yinsh.color.UNDEFINED
+<i>22</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;f&#39;, 7) == null
+<i>23</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;g&#39;, 8) == Yinsh.color.UNDEFINED
+<i>24</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;g&#39;, 8) == null
+<i>25</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;h&#39;, 9) == Yinsh.color.UNDEFINED
+<i>26</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;h&#39;, 9) == null
+<i>27</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;i&#39;, 10) == Yinsh.color.UNDEFINED
+<i>28</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;i&#39;, 10) == null);
+<b class="fc"><i>29</i>&nbsp;    }</b>
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    public void testRemoveRing() {
+<b class="fc"><i>32</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>33</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 10, Yinsh.color.BLACK);</b>
+<b class="fc"><i>34</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 10, Yinsh.state.RING);</b>
+<b class="fc"><i>35</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
+<b class="fc"><i>36</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
+<b class="fc"><i>37</i>&nbsp;        int numberOfBlackPointsInit = yinsh.getPlayerPoints(Yinsh.color.BLACK);</b>
+<b class="fc"><i>38</i>&nbsp;        yinsh.removeRing(&#39;h&#39;, 10);</b>
+<b class="fc"><i>39</i>&nbsp;        int numberOfBlackPointsFinale = yinsh.getPlayerPoints(Yinsh.color.BLACK);</b>
+<b class="fc"><i>40</i>&nbsp;        assertTrue(yinsh.getIntersectionColor(&#39;h&#39;, 10) == Yinsh.color.UNDEFINED</b>
+<i>41</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;h&#39;, 10) == null
+<i>42</i>&nbsp;                &amp;&amp; numberOfBlackPointsFinale - numberOfBlackPointsInit == 1);
+<b class="fc"><i>43</i>&nbsp;    }</b>
+<i>44</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2013-10-24 09:50</div>
+</div>
+</body>
+</html>
