@@ -82,10 +82,10 @@
 <b class="fc"><i>8</i>&nbsp;    }</b>
 <i>9</i>&nbsp;
 <i>10</i>&nbsp;    public void testDuplicateRing() throws Exception {
-<b class="fc"><i>11</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
-<b class="fc"><i>12</i>&nbsp;        yinsh.putRing(&#39;a&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>11</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
+<b class="fc"><i>12</i>&nbsp;        yinsh.putRing(&#39;a&#39;, 2, YinshGame.GAMECOLOR.BLACK);</b>
 <i>13</i>&nbsp;        try {
-<b class="fc"><i>14</i>&nbsp;            yinsh.putRing(&#39;a&#39;, 2, Yinsh.color.WHITE);</b>
+<b class="fc"><i>14</i>&nbsp;            yinsh.putRing(&#39;a&#39;, 2, YinshGame.GAMECOLOR.WHITE);</b>
 <b class="nc"><i>15</i>&nbsp;            assertTrue(false);</b>
 <b class="fc"><i>16</i>&nbsp;        } catch (Exception exception) {</b>
 <b class="fc"><i>17</i>&nbsp;            assertTrue(true);</b>
@@ -100,7 +100,7 @@
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2013-10-24 09:50</div>
+    <div style="float:right;">generated on 2013-10-24 10:26</div>
 </div>
 </body>
 </html>

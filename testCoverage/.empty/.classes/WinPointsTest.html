@@ -78,42 +78,42 @@
 <b class="fc"><i>4</i>&nbsp;public class WinPointsTest extends TestCase {</b>
 <i>5</i>&nbsp;
 <i>6</i>&nbsp;    public void testRemoveRow() {
-<b class="fc"><i>7</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
-<b class="fc"><i>8</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 6, Yinsh.color.BLACK);</b>
-<b class="fc"><i>9</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 6, Yinsh.state.MARKER);</b>
-<b class="fc"><i>10</i>&nbsp;        yinsh.setIntersectionColor(&#39;f&#39;, 7, Yinsh.color.BLACK);</b>
-<b class="fc"><i>11</i>&nbsp;        yinsh.setIntersectionState(&#39;f&#39;, 7, Yinsh.state.MARKER);</b>
-<b class="fc"><i>12</i>&nbsp;        yinsh.setIntersectionColor(&#39;g&#39;, 8, Yinsh.color.BLACK);</b>
-<b class="fc"><i>13</i>&nbsp;        yinsh.setIntersectionState(&#39;g&#39;, 8, Yinsh.state.MARKER);</b>
-<b class="fc"><i>14</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 9, Yinsh.color.BLACK);</b>
-<b class="fc"><i>15</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 9, Yinsh.state.MARKER);</b>
-<b class="fc"><i>16</i>&nbsp;        yinsh.setIntersectionColor(&#39;i&#39;, 10, Yinsh.color.BLACK);</b>
-<b class="fc"><i>17</i>&nbsp;        yinsh.setIntersectionState(&#39;i&#39;, 10, Yinsh.state.MARKER);</b>
+<b class="fc"><i>7</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
+<b class="fc"><i>8</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 6, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>9</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 6, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>10</i>&nbsp;        yinsh.setIntersectionColor(&#39;f&#39;, 7, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>11</i>&nbsp;        yinsh.setIntersectionState(&#39;f&#39;, 7, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>12</i>&nbsp;        yinsh.setIntersectionColor(&#39;g&#39;, 8, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>13</i>&nbsp;        yinsh.setIntersectionState(&#39;g&#39;, 8, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>14</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 9, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>15</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 9, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>16</i>&nbsp;        yinsh.setIntersectionColor(&#39;i&#39;, 10, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>17</i>&nbsp;        yinsh.setIntersectionState(&#39;i&#39;, 10, YinshGame.GAMESTATE.MARKERSTATE);</b>
 <b class="fc"><i>18</i>&nbsp;        yinsh.removeRow(&#39;e&#39;, 6, &#39;i&#39;, 10);</b>
-<b class="fc"><i>19</i>&nbsp;        assertTrue(yinsh.getIntersectionColor(&#39;e&#39;, 6) == Yinsh.color.UNDEFINED</b>
+<b class="fc"><i>19</i>&nbsp;        assertTrue(yinsh.getIntersectionColor(&#39;e&#39;, 6) == YinshGame.GAMECOLOR.UNDEFINED</b>
 <i>20</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;e&#39;, 6) == null
-<i>21</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;f&#39;, 7) == Yinsh.color.UNDEFINED
+<i>21</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;f&#39;, 7) == YinshGame.GAMECOLOR.UNDEFINED
 <i>22</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;f&#39;, 7) == null
-<i>23</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;g&#39;, 8) == Yinsh.color.UNDEFINED
+<i>23</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;g&#39;, 8) == YinshGame.GAMECOLOR.UNDEFINED
 <i>24</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;g&#39;, 8) == null
-<i>25</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;h&#39;, 9) == Yinsh.color.UNDEFINED
+<i>25</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;h&#39;, 9) == YinshGame.GAMECOLOR.UNDEFINED
 <i>26</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;h&#39;, 9) == null
-<i>27</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;i&#39;, 10) == Yinsh.color.UNDEFINED
+<i>27</i>&nbsp;                &amp;&amp; yinsh.getIntersectionColor(&#39;i&#39;, 10) == YinshGame.GAMECOLOR.UNDEFINED
 <i>28</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;i&#39;, 10) == null);
 <b class="fc"><i>29</i>&nbsp;    }</b>
 <i>30</i>&nbsp;
 <i>31</i>&nbsp;    public void testRemoveRing() {
-<b class="fc"><i>32</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
-<b class="fc"><i>33</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 10, Yinsh.color.BLACK);</b>
-<b class="fc"><i>34</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 10, Yinsh.state.RING);</b>
-<b class="fc"><i>35</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
-<b class="fc"><i>36</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
-<b class="fc"><i>37</i>&nbsp;        int numberOfBlackPointsInit = yinsh.getPlayerPoints(Yinsh.color.BLACK);</b>
+<b class="fc"><i>32</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
+<b class="fc"><i>33</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 10, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>34</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 10, YinshGame.GAMESTATE.RINGSTATE);</b>
+<b class="fc"><i>35</i>&nbsp;        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);</b>
+<b class="fc"><i>36</i>&nbsp;        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);</b>
+<b class="fc"><i>37</i>&nbsp;        int nbOfBlackPointsInit = yinsh.getPlayerPoints(YinshGame.GAMECOLOR.BLACK);</b>
 <b class="fc"><i>38</i>&nbsp;        yinsh.removeRing(&#39;h&#39;, 10);</b>
-<b class="fc"><i>39</i>&nbsp;        int numberOfBlackPointsFinale = yinsh.getPlayerPoints(Yinsh.color.BLACK);</b>
-<b class="fc"><i>40</i>&nbsp;        assertTrue(yinsh.getIntersectionColor(&#39;h&#39;, 10) == Yinsh.color.UNDEFINED</b>
+<b class="fc"><i>39</i>&nbsp;        int nbOfBlackPointsFinal = yinsh.getPlayerPoints(YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>40</i>&nbsp;        assertTrue(yinsh.getIntersectionColor(&#39;h&#39;, 10) == YinshGame.GAMECOLOR.UNDEFINED</b>
 <i>41</i>&nbsp;                &amp;&amp; yinsh.getIntersectionState(&#39;h&#39;, 10) == null
-<i>42</i>&nbsp;                &amp;&amp; numberOfBlackPointsFinale - numberOfBlackPointsInit == 1);
+<i>42</i>&nbsp;                &amp;&amp; nbOfBlackPointsFinal - nbOfBlackPointsInit == 1);
 <b class="fc"><i>43</i>&nbsp;    }</b>
 <i>44</i>&nbsp;}
 </div>
@@ -121,7 +121,7 @@
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2013-10-24 09:50</div>
+    <div style="float:right;">generated on 2013-10-24 10:26</div>
 </div>
 </body>
 </html>

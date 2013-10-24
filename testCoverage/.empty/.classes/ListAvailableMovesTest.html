@@ -77,41 +77,41 @@
 <i>3</i>&nbsp;
 <b class="fc"><i>4</i>&nbsp;public class ListAvailableMovesTest extends TestCase {</b>
 <i>5</i>&nbsp;    public void testIsPossibleMove() {
-<b class="fc"><i>6</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>6</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
 <i>7</i>&nbsp;        // init plate for test
 <i>8</i>&nbsp;        // col e line 3 to 9
-<b class="fc"><i>9</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 3, Yinsh.color.WHITE);</b>
-<b class="fc"><i>10</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 3, Yinsh.state.MARKER);</b>
-<b class="fc"><i>11</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 4, Yinsh.color.BLACK);</b>
-<b class="fc"><i>12</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 4, Yinsh.state.RING);</b>
-<b class="fc"><i>13</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
-<b class="fc"><i>14</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
-<b class="fc"><i>15</i>&nbsp;        yinsh.setCurrentColor(Yinsh.color.BLACK);</b>
-<b class="fc"><i>16</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 5, Yinsh.color.BLACK);</b>
-<b class="fc"><i>17</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 5, Yinsh.state.MARKER);</b>
-<b class="fc"><i>18</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 6, Yinsh.color.WHITE);</b>
-<b class="fc"><i>19</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 6, Yinsh.state.MARKER);</b>
-<b class="fc"><i>20</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 7, Yinsh.color.WHITE);</b>
-<b class="fc"><i>21</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 7, Yinsh.state.MARKER);</b>
-<b class="fc"><i>22</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 8, Yinsh.color.BLACK);</b>
-<b class="fc"><i>23</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 8, Yinsh.state.MARKER);</b>
-<b class="fc"><i>24</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 9, Yinsh.color.WHITE);</b>
-<b class="fc"><i>25</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 9, Yinsh.state.MARKER);</b>
+<b class="fc"><i>9</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 3, YinshGame.GAMECOLOR.WHITE);</b>
+<b class="fc"><i>10</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 3, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>11</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 4, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>12</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 4, YinshGame.GAMESTATE.RINGSTATE);</b>
+<b class="fc"><i>13</i>&nbsp;        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);</b>
+<b class="fc"><i>14</i>&nbsp;        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);</b>
+<b class="fc"><i>15</i>&nbsp;        yinsh.setCurrentColor(YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>16</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 5, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>17</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 5, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>18</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 6, YinshGame.GAMECOLOR.WHITE);</b>
+<b class="fc"><i>19</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 6, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>20</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 7, YinshGame.GAMECOLOR.WHITE);</b>
+<b class="fc"><i>21</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 7, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>22</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 8, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>23</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 8, YinshGame.GAMESTATE.MARKERSTATE);</b>
+<b class="fc"><i>24</i>&nbsp;        yinsh.setIntersectionColor(&#39;e&#39;, 9, YinshGame.GAMECOLOR.WHITE);</b>
+<b class="fc"><i>25</i>&nbsp;        yinsh.setIntersectionState(&#39;e&#39;, 9, YinshGame.GAMESTATE.MARKERSTATE);</b>
 <i>26</i>&nbsp;        ///////////////////////////////////////////////////////////
 <i>27</i>&nbsp;        //col b
-<b class="fc"><i>28</i>&nbsp;        yinsh.setIntersectionColor(&#39;b&#39;, 4, Yinsh.color.WHITE);</b>
-<b class="fc"><i>29</i>&nbsp;        yinsh.setIntersectionState(&#39;b&#39;, 4, Yinsh.state.RING);</b>
-<b class="fc"><i>30</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
-<b class="fc"><i>31</i>&nbsp;        yinsh.incrementRings(Yinsh.color.UNDEFINED);</b>
+<b class="fc"><i>28</i>&nbsp;        yinsh.setIntersectionColor(&#39;b&#39;, 4, YinshGame.GAMECOLOR.WHITE);</b>
+<b class="fc"><i>29</i>&nbsp;        yinsh.setIntersectionState(&#39;b&#39;, 4, YinshGame.GAMESTATE.RINGSTATE);</b>
+<b class="fc"><i>30</i>&nbsp;        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);</b>
+<b class="fc"><i>31</i>&nbsp;        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);</b>
 <i>32</i>&nbsp;        //col c
-<b class="fc"><i>33</i>&nbsp;        yinsh.setIntersectionColor(&#39;c&#39;, 4, Yinsh.color.BLACK);</b>
-<b class="fc"><i>34</i>&nbsp;        yinsh.setIntersectionState(&#39;c&#39;, 4, Yinsh.state.MARKER);</b>
+<b class="fc"><i>33</i>&nbsp;        yinsh.setIntersectionColor(&#39;c&#39;, 4, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>34</i>&nbsp;        yinsh.setIntersectionState(&#39;c&#39;, 4, YinshGame.GAMESTATE.MARKERSTATE);</b>
 <i>35</i>&nbsp;        //col h
-<b class="fc"><i>36</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 7, Yinsh.color.WHITE);</b>
-<b class="fc"><i>37</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 7, Yinsh.state.MARKER);</b>
+<b class="fc"><i>36</i>&nbsp;        yinsh.setIntersectionColor(&#39;h&#39;, 7, YinshGame.GAMECOLOR.WHITE);</b>
+<b class="fc"><i>37</i>&nbsp;        yinsh.setIntersectionState(&#39;h&#39;, 7, YinshGame.GAMESTATE.MARKERSTATE);</b>
 <i>38</i>&nbsp;        //col i
-<b class="fc"><i>39</i>&nbsp;        yinsh.setIntersectionColor(&#39;i&#39;, 8, Yinsh.color.BLACK);</b>
-<b class="fc"><i>40</i>&nbsp;        yinsh.setIntersectionState(&#39;i&#39;, 8, Yinsh.state.MARKER);</b>
+<b class="fc"><i>39</i>&nbsp;        yinsh.setIntersectionColor(&#39;i&#39;, 8, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>40</i>&nbsp;        yinsh.setIntersectionState(&#39;i&#39;, 8, YinshGame.GAMESTATE.MARKERSTATE);</b>
 <i>41</i>&nbsp;        // end init plate
 <i>42</i>&nbsp;
 <b class="fc"><i>43</i>&nbsp;        assertTrue(yinsh.isPossibleMove(&#39;e&#39;, 4, &#39;e&#39;, 2)</b>
@@ -132,7 +132,7 @@
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2013-10-24 09:50</div>
+    <div style="float:right;">generated on 2013-10-24 10:26</div>
 </div>
 </body>
 </html>

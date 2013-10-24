@@ -82,23 +82,23 @@
 <b class="fc"><i>8</i>&nbsp;    }</b>
 <i>9</i>&nbsp;
 <i>10</i>&nbsp;    public void testHasRing() throws Exception {
-<b class="fc"><i>11</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>11</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
 <i>12</i>&nbsp;
-<b class="fc"><i>13</i>&nbsp;        yinsh.putRing(&#39;a&#39;, 2, Yinsh.color.BLACK);</b>
+<b class="fc"><i>13</i>&nbsp;        yinsh.putRing(&#39;a&#39;, 2, YinshGame.GAMECOLOR.BLACK);</b>
 <b class="fc"><i>14</i>&nbsp;        assertTrue(yinsh.hasRing(&#39;a&#39;, 2));</b>
 <b class="fc"><i>15</i>&nbsp;    }</b>
 <i>16</i>&nbsp;
 <i>17</i>&nbsp;    public void testInitial() throws Exception {
-<b class="fc"><i>18</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
-<b class="fc"><i>19</i>&nbsp;        assertTrue(yinsh.numberOfRings == 0);</b>
-<b class="fc"><i>20</i>&nbsp;        yinsh.putRing(&#39;a&#39;, 2, Yinsh.color.BLACK);</b>
-<b class="fc"><i>21</i>&nbsp;        assertTrue(yinsh.numberOfRings == 1);</b>
+<b class="fc"><i>18</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
+<b class="fc"><i>19</i>&nbsp;        assertTrue(yinsh.m_numberOfRings == 0);</b>
+<b class="fc"><i>20</i>&nbsp;        yinsh.putRing(&#39;a&#39;, 2, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>21</i>&nbsp;        assertTrue(yinsh.m_numberOfRings == 1);</b>
 <b class="fc"><i>22</i>&nbsp;    }</b>
 <i>23</i>&nbsp;
 <i>24</i>&nbsp;    public void testWrongCoord() throws Exception {
-<b class="fc"><i>25</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>25</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
 <i>26</i>&nbsp;        try {
-<b class="fc"><i>27</i>&nbsp;            yinsh.putRing(&#39;j&#39;, 4, Yinsh.color.BLACK);</b>
+<b class="fc"><i>27</i>&nbsp;            yinsh.putRing(&#39;j&#39;, 4, YinshGame.GAMECOLOR.BLACK);</b>
 <b class="nc"><i>28</i>&nbsp;            assertTrue(false);</b>
 <b class="fc"><i>29</i>&nbsp;        } catch (Exception exception) {</b>
 <b class="fc"><i>30</i>&nbsp;            assertTrue(true);</b>
@@ -106,10 +106,10 @@
 <b class="fc"><i>32</i>&nbsp;    }</b>
 <i>33</i>&nbsp;
 <i>34</i>&nbsp;    public void testDuplicateColor() throws Exception {
-<b class="fc"><i>35</i>&nbsp;        Yinsh yinsh = new Yinsh();</b>
+<b class="fc"><i>35</i>&nbsp;        YinshGame yinsh = new YinshGame();</b>
 <i>36</i>&nbsp;        try {
-<b class="fc"><i>37</i>&nbsp;            yinsh.putRing(&#39;j&#39;, 5, Yinsh.color.BLACK);</b>
-<b class="fc"><i>38</i>&nbsp;            yinsh.putRing(&#39;j&#39;, 6, Yinsh.color.BLACK);</b>
+<b class="fc"><i>37</i>&nbsp;            yinsh.putRing(&#39;j&#39;, 5, YinshGame.GAMECOLOR.BLACK);</b>
+<b class="fc"><i>38</i>&nbsp;            yinsh.putRing(&#39;j&#39;, 6, YinshGame.GAMECOLOR.BLACK);</b>
 <b class="nc"><i>39</i>&nbsp;            assertTrue(false);</b>
 <b class="fc"><i>40</i>&nbsp;        } catch (Exception exception) {</b>
 <b class="fc"><i>41</i>&nbsp;            assertTrue(true);</b>
@@ -121,7 +121,7 @@
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2013-10-24 09:50</div>
+    <div style="float:right;">generated on 2013-10-24 10:26</div>
 </div>
 </body>
 </html>
