@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54c08625-fde5-4db6-95a7-bfddb112ac36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Application.java" />
+    <list default="true" id="54c08625-fde5-4db6-95a7-bfddb112ac36" name="Default" comment="Modifications to add application class.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Coordinates.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.java" afterPath="$PROJECT_DIR$/src/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ColorTest.java" afterPath="$PROJECT_DIR$/src/ColorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DuplicateRingTest.java" afterPath="$PROJECT_DIR$/src/DuplicateRingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FirstMovesTest.java" afterPath="$PROJECT_DIR$/src/FirstMovesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameTest.java" afterPath="$PROJECT_DIR$/src/GameTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InitializationTest.java" afterPath="$PROJECT_DIR$/src/InitializationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListAvailableMovesTest.java" afterPath="$PROJECT_DIR$/src/ListAvailableMovesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MarkerTest.java" afterPath="$PROJECT_DIR$/src/MarkerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WinPointsTest.java" afterPath="$PROJECT_DIR$/src/WinPointsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/YinshGame.java" afterPath="$PROJECT_DIR$/src/YinshGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Yinsh.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382603208639" ignored="false" />
+    <file path="/Dummy.txt" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382608763255" ignored="false" />
     <file path="/Yinsh.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382602170708" ignored="false" />
     <file path="/Intersection.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382602708370" ignored="false" />
-    <file path="/YinshGame.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382602955868" ignored="false" />
-    <file path="/WinPointsTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382602979309" ignored="false" />
+    <file path="/YinshGame.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382608390780" ignored="false" />
+    <file path="/WinPointsTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607574914" ignored="false" />
     <file path="$PROJECT_DIR$/testCoverage/.css/coverage.css" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382603194758" ignored="false" />
-    <file path="/Application.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382605100130" ignored="false" />
+    <file path="/Application.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382606939786" ignored="false" />
+    <file path="/InitializationTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607332062" ignored="false" />
+    <file path="/Coordinates.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382606433429" ignored="false" />
+    <file path="/a.dummy" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382606472033" ignored="false" />
+    <file path="/ColorTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382608986014" ignored="false" />
+    <file path="/DuplicateRingTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607407982" ignored="false" />
+    <file path="/FirstMovesTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607443614" ignored="false" />
+    <file path="/GameTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607524591" ignored="false" />
+    <file path="/MarkerTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607916709" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,15 +95,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="YinshGame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
+      <file leaf-file-name="ColorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ColorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="16" selection-start="4757" selection-end="4757" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#335#366#0" expanded="true" />
-                <element signature="e#910#924#0" expanded="true" />
-              </folding>
+            <state line="9" column="65" selection-start="268" selection-end="268" vertical-scroll-proportion="-3.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="66" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-10.333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarkerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MarkerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="44" selection-start="5531" selection-end="5531" vertical-scroll-proportion="2.137255">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,26 +125,66 @@
       <file leaf-file-name="WinPointsTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WinPointsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="59" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0">
+            <state line="17" column="42" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="135" selection-start="875" selection-end="875" vertical-scroll-proportion="-0.0981241">
+            <state line="20" column="82" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Intersection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Intersection.java">
+      <file leaf-file-name="InitializationTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InitializationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+            <state line="10" column="66" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.5294118">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListAvailableMovesTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ListAvailableMovesTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="0.53125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DuplicateRingTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DuplicateRingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="66" selection-start="295" selection-end="295" vertical-scroll-proportion="-2.1960785">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstMovesTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FirstMovesTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="66" selection-start="220" selection-end="220" vertical-scroll-proportion="-2.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YinshGame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="174" column="0" selection-start="6051" selection-end="6051" vertical-scroll-proportion="-1.8431373">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#335#366#0" expanded="true" />
+                <element signature="e#1048#1062#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,9 +209,17 @@
       <list>
         <option value="$PROJECT_DIR$/src/Yinsh.java" />
         <option value="$PROJECT_DIR$/src/Intersection.java" />
-        <option value="$PROJECT_DIR$/src/YinshGame.java" />
+        <option value="$PROJECT_DIR$/src/Coordinates.java" />
         <option value="$PROJECT_DIR$/src/WinPointsTest.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
+        <option value="$PROJECT_DIR$/src/YinshGame.java" />
+        <option value="$PROJECT_DIR$/src/ColorTest.java" />
+        <option value="$PROJECT_DIR$/src/DuplicateRingTest.java" />
+        <option value="$PROJECT_DIR$/src/FirstMovesTest.java" />
+        <option value="$PROJECT_DIR$/src/GameTest.java" />
+        <option value="$PROJECT_DIR$/src/InitializationTest.java" />
+        <option value="$PROJECT_DIR$/src/ListAvailableMovesTest.java" />
+        <option value="$PROJECT_DIR$/src/MarkerTest.java" />
       </list>
     </option>
   </component>
@@ -280,7 +360,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/testCoverage" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -320,6 +400,23 @@
       <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Yinsh" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -414,12 +511,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AllTests" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Application" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="JUnit.AllTests" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Application" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -463,39 +562,43 @@
       <created>1382603218696</created>
       <updated>1382603218696</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding Application well for class integration">
+      <created>1382605804614</created>
+      <updated>1382605804614</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6703755" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6703755" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2117117" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45201668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2117117" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45201668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -540,7 +643,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating test coverage analysing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifications to add application class." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -557,6 +660,8 @@
     <MESSAGE value="Add test coverage and idea project configuration to version control system" />
     <MESSAGE value="Solving naming convention problems" />
     <MESSAGE value="updating test coverage analysing" />
+    <MESSAGE value="Adding Application well for class integration" />
+    <MESSAGE value="Modifications to add application class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -580,27 +685,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WinPointsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Coordinates.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="59" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0">
+        <state line="12" column="32" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="82" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ColorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="65" selection-start="268" selection-end="268" vertical-scroll-proportion="-3.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DuplicateRingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="66" selection-start="295" selection-end="295" vertical-scroll-proportion="-2.1960785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FirstMovesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="66" selection-start="220" selection-end="220" vertical-scroll-proportion="-2.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="66" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-10.333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InitializationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="66" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.5294118">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="16" selection-start="4757" selection-end="4757" vertical-scroll-proportion="0.0">
+        <state line="174" column="0" selection-start="6051" selection-end="6051" vertical-scroll-proportion="-1.8431373">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#335#366#0" expanded="true" />
-            <element signature="e#910#924#0" expanded="true" />
+            <element signature="e#1048#1062#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/WinPointsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="135" selection-start="875" selection-end="875" vertical-scroll-proportion="-0.0981241">
+        <state line="17" column="42" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MarkerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="44" selection-start="5531" selection-end="5531" vertical-scroll-proportion="2.137255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ListAvailableMovesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="0.53125">
           <folding />
         </state>
       </provider>

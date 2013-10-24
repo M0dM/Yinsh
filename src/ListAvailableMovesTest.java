@@ -3,7 +3,7 @@ import junit.framework.TestCase;
 
 public class ListAvailableMovesTest extends TestCase {
     public void testIsPossibleMove() {
-        YinshGame yinsh = new YinshGame();
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
         // init plate for test
         // col e line 3 to 9
         yinsh.setIntersectionColor('e', 3, YinshGame.GAMECOLOR.WHITE);

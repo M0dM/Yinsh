@@ -18,11 +18,14 @@ public class YinshGame {
     private int m_blackPoints = 0;
     private int m_whitePoints = 0;
 
-    public YinshGame() {
+    public YinshGame(GAMECOLOR firstPlayer) {
         m_numberOfRings = 0;
         m_numberOfBlackRings = 0;
         m_numberOfWhiteRings = 0;
-        m_currentColor = null;
+        if(firstPlayer == GAMECOLOR.WHITE)
+            m_currentColor = GAMECOLOR.BLACK;
+        else
+            m_currentColor = GAMECOLOR.WHITE;
         for (int i = 0; i < 10; i++) {
             Vector<Intersection> line = new Vector<Intersection>();
             initLineIntersections(line);
@@ -119,7 +122,11 @@ public class YinshGame {
         }
     }
 
-    public void removeRow(char colInit, int lineInit, char colFinale, int lineFinale) {
+    public void removeRow(Coordinates coordinatesInit, Coordinates coordinatesFinal, GAMECOLOR color) {
+        char colInit = coordinatesInit.m_col;
+        int lineInit = coordinatesInit.m_line;
+        char colFinale = coordinatesFinal.m_col;
+        int lineFinale = coordinatesFinal.m_line;
         if (colInit == colFinale) {
             removeCol(colInit, lineInit, lineFinale);
         } else if (lineInit == lineFinale) {
@@ -138,7 +145,9 @@ public class YinshGame {
         setIntersectionState(col, line, null);
     }
 
-    public void removeRing(char col, int line) {
+    public void removeRing(Coordinates coordinates, GAMECOLOR color) {
+        char col = coordinates.m_col;
+        int line = coordinates.m_line;
         m_numberOfBlackRings--;
         m_numberOfRings--;
         if (getIntersectionColor(col, line) == GAMECOLOR.BLACK) {
@@ -153,7 +162,9 @@ public class YinshGame {
         return m_currentColor;
     }
 
-    public void putRing(char col, int ligne, GAMECOLOR color) throws Exception {
+    public void putRing(Coordinates coordinates, GAMECOLOR color) throws Exception {
+        char col = coordinates.m_col;
+        int ligne = coordinates.m_line;
         if (!hasCoordinates(col, ligne)) {
             throw new Exception("Invalid coordinate.");
         } else {
@@ -176,8 +187,9 @@ public class YinshGame {
         }
     }
 
-    public void putMarker(char col, int ligne, GAMECOLOR color) throws Exception {
-
+    public void putMarker (Coordinates coordinates, GAMECOLOR color) throws Exception {
+        char col = coordinates.m_col;
+        int ligne = coordinates.m_line;
         if (hasRingWithWrongColor(col, ligne, color)) {
             throw new Exception("Invalid ring color.");
         } else if (hasRing(col, ligne)) {
@@ -228,7 +240,11 @@ public class YinshGame {
             m_plate.get((int) colInit - 'a').get(lineInit - 1).setColor(getOppositeColor(m_plate.get((int) colInit - 'a').get(lineInit - 1).getColor()));
     }
 
-    public void moveRing(char colInit, int lineInit, char colFinale, int lineFinale) throws Exception {
+    public void moveRing(Coordinates coordinatesInit, Coordinates coordinatesFinal, GAMECOLOR color) throws Exception {
+        char colInit = coordinatesInit.m_col;
+        int lineInit = coordinatesInit.m_line;
+        char colFinale = coordinatesFinal.m_col;
+        int lineFinale = coordinatesFinal.m_line;
         if (hasRing(colFinale, lineFinale)) {
             throw new Exception("Ring already in intersection.");
         } else {

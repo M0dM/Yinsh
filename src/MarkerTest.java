@@ -8,50 +8,50 @@ public class MarkerTest extends TestCase {
     }
 
     public void testPutMarker() throws Exception {
-        YinshGame yinsh = new YinshGame();
-        yinsh.putRing('d', 2, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('b', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('f', 7, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('d', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('g', 9, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('g', 8, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('j', 8, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('h', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putMarker('d', 2, YinshGame.GAMECOLOR.BLACK);
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('C', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('B', 1), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('B', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('F', 7), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('G', 9), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('G', 8), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('J', 8), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('H', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putMarker(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
     }
 
     public void testMoveMarker() throws Exception {
-        YinshGame yinsh = new YinshGame();
-        yinsh.putRing('d', 2, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('b', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('f', 7, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('d', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('g', 9, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('g', 8, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('j', 8, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('h', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.moveRing('d', 2, 'd', 5);
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('C', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('B', 1), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('B', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('F', 7), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('G', 9), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('G', 8), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('J', 8), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('H', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.moveRing(new Coordinates('D', 2), new Coordinates('D', 5), YinshGame.GAMECOLOR.UNDEFINED);
         yinsh.hasRing('d', 5);
     }
 
     public void testInvalidRingColor() throws Exception {
-        YinshGame yinsh = new YinshGame();
-        yinsh.putRing('d', 2, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('b', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('f', 7, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('d', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('g', 9, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('g', 8, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('j', 8, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('h', 6, YinshGame.GAMECOLOR.WHITE);
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('C', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('B', 1), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('B', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('F', 7), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('G', 9), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('G', 8), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('J', 8), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('H', 6), YinshGame.GAMECOLOR.WHITE);
         try {
-            yinsh.putMarker('d', 2, YinshGame.GAMECOLOR.WHITE);
+            yinsh.putMarker(new Coordinates('D', 2), YinshGame.GAMECOLOR.WHITE);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);
@@ -60,20 +60,20 @@ public class MarkerTest extends TestCase {
     }
 
     public void testNoMatchedRing() throws Exception {
-        YinshGame yinsh = new YinshGame();
-        yinsh.putRing('d', 2, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('b', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('f', 7, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('d', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('g', 9, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('g', 8, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('j', 8, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('h', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.moveRing('d', 2, 'd', 5);
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('C', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('B', 1), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('B', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('F', 7), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('G', 9), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('G', 8), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('J', 8), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('H', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.moveRing(new Coordinates('D', 2), new Coordinates('D', 5), YinshGame.GAMECOLOR.UNDEFINED);
         try {
-            yinsh.putMarker('d', 3, YinshGame.GAMECOLOR.BLACK);
+            yinsh.putMarker(new Coordinates('D', 3), YinshGame.GAMECOLOR.BLACK);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);
@@ -81,19 +81,19 @@ public class MarkerTest extends TestCase {
     }
 
     public void testRingAlreadyInIntersection() throws Exception {
-        YinshGame yinsh = new YinshGame();
-        yinsh.putRing('d', 2, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('b', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('f', 7, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('d', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('g', 9, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('g', 8, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('j', 8, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('h', 6, YinshGame.GAMECOLOR.WHITE);
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('C', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('B', 1), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('B', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('F', 7), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('G', 9), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('G', 8), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('J', 8), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('H', 6), YinshGame.GAMECOLOR.WHITE);
         try {
-            yinsh.moveRing('d', 2, 'd', 6);
+            yinsh.moveRing(new Coordinates('D', 2), new Coordinates('D', 6), YinshGame.GAMECOLOR.UNDEFINED);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);
@@ -101,19 +101,19 @@ public class MarkerTest extends TestCase {
     }
 
     public void testNoSameColomnOrLine() throws Exception {
-        YinshGame yinsh = new YinshGame();
-        yinsh.putRing('d', 2, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('b', 2, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('f', 7, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('d', 6, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('g', 9, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('g', 8, YinshGame.GAMECOLOR.WHITE);
-        yinsh.putRing('j', 8, YinshGame.GAMECOLOR.BLACK);
-        yinsh.putRing('h', 6, YinshGame.GAMECOLOR.WHITE);
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 2), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('C', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('B', 1), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('B', 2), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('F', 7), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('D', 6), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('G', 9), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('G', 8), YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing(new Coordinates('J', 8), YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing(new Coordinates('H', 6), YinshGame.GAMECOLOR.WHITE);
         try {
-            yinsh.moveRing('d', 2, 'i', 7);
+            yinsh.moveRing(new Coordinates('D', 2), new Coordinates('I', 7), YinshGame.GAMECOLOR.UNDEFINED);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);

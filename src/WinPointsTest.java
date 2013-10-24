@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 public class WinPointsTest extends TestCase {
 
     public void testRemoveRow() {
-        YinshGame yinsh = new YinshGame();
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.WHITE);
         yinsh.setIntersectionColor('e', 6, YinshGame.GAMECOLOR.BLACK);
         yinsh.setIntersectionState('e', 6, YinshGame.GAMESTATE.MARKERSTATE);
         yinsh.setIntersectionColor('f', 7, YinshGame.GAMECOLOR.BLACK);
@@ -15,7 +15,7 @@ public class WinPointsTest extends TestCase {
         yinsh.setIntersectionState('h', 9, YinshGame.GAMESTATE.MARKERSTATE);
         yinsh.setIntersectionColor('i', 10, YinshGame.GAMECOLOR.BLACK);
         yinsh.setIntersectionState('i', 10, YinshGame.GAMESTATE.MARKERSTATE);
-        yinsh.removeRow('e', 6, 'i', 10);
+        yinsh.removeRow(new Coordinates('E', 6), new Coordinates('I', 10), YinshGame.GAMECOLOR.UNDEFINED);
         assertTrue(yinsh.getIntersectionColor('e', 6) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('e', 6) == null
                 && yinsh.getIntersectionColor('f', 7) == YinshGame.GAMECOLOR.UNDEFINED
@@ -29,13 +29,13 @@ public class WinPointsTest extends TestCase {
     }
 
     public void testRemoveRing() {
-        YinshGame yinsh = new YinshGame();
+        YinshGame yinsh = new YinshGame(YinshGame.GAMECOLOR.WHITE);
         yinsh.setIntersectionColor('h', 10, YinshGame.GAMECOLOR.BLACK);
         yinsh.setIntersectionState('h', 10, YinshGame.GAMESTATE.RINGSTATE);
         yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);
         yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);
         int nbOfBlackPointsInit = yinsh.getPlayerPoints(YinshGame.GAMECOLOR.BLACK);
-        yinsh.removeRing('h', 10);
+        yinsh.removeRing(new Coordinates('H', 10), YinshGame.GAMECOLOR.UNDEFINED);
         int nbOfBlackPointsFinal = yinsh.getPlayerPoints(YinshGame.GAMECOLOR.BLACK);
         assertTrue(yinsh.getIntersectionColor('h', 10) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('h', 10) == null
