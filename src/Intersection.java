@@ -1,28 +1,28 @@
 
 class Intersection {
 
-    private Yinsh.color color;
-    private Yinsh.state state;
+    private YinshGame.GAMECOLOR m_color;
+    private YinshGame.GAMESTATE m_state;
 
-    public Intersection(Yinsh.color color, Yinsh.state state) {
-        this.color = color;
-        this.state = state;
+    public Intersection(YinshGame.GAMECOLOR color, YinshGame.GAMESTATE state) {
+        m_color = color;
+        m_state = state;
     }
 
-    public Yinsh.color getColor() {
-        return color;
+    public YinshGame.GAMECOLOR getColor() {
+        return m_color;
     }
 
-    public void setColor(Yinsh.color color) {
-        this.color = color;
+    public void setColor(YinshGame.GAMECOLOR color) {
+        m_color = color;
     }
 
-    public Yinsh.state getState() {
-        return state;
+    public YinshGame.GAMESTATE getState() {
+        return m_state;
     }
 
-    public void setState(Yinsh.state state) {
-        this.state = state;
+    public void setState(YinshGame.GAMESTATE state) {
+        m_state = state;
     }
 
 }

@@ -7,8 +7,8 @@ public class ColorTest extends TestCase {
     }
 
     public void testColor() throws Exception {
-        Yinsh yinsh = new Yinsh();
-        yinsh.putRing('a', 2, Yinsh.color.BLACK);
-        assertTrue(yinsh.currentColor() == Yinsh.color.BLACK);
+        YinshGame yinsh = new YinshGame();
+        yinsh.putRing('a', 2, YinshGame.GAMECOLOR.BLACK);
+        assertTrue(yinsh.currentColor() == YinshGame.GAMECOLOR.BLACK);
     }
 }

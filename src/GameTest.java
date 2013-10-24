@@ -8,23 +8,23 @@ public class GameTest extends TestCase {
     }
 
     public void testHasRing() throws Exception {
-        Yinsh yinsh = new Yinsh();
+        YinshGame yinsh = new YinshGame();
 
-        yinsh.putRing('a', 2, Yinsh.color.BLACK);
+        yinsh.putRing('a', 2, YinshGame.GAMECOLOR.BLACK);
         assertTrue(yinsh.hasRing('a', 2));
     }
 
     public void testInitial() throws Exception {
-        Yinsh yinsh = new Yinsh();
-        assertTrue(yinsh.numberOfRings == 0);
-        yinsh.putRing('a', 2, Yinsh.color.BLACK);
-        assertTrue(yinsh.numberOfRings == 1);
+        YinshGame yinsh = new YinshGame();
+        assertTrue(yinsh.m_numberOfRings == 0);
+        yinsh.putRing('a', 2, YinshGame.GAMECOLOR.BLACK);
+        assertTrue(yinsh.m_numberOfRings == 1);
     }
 
     public void testWrongCoord() throws Exception {
-        Yinsh yinsh = new Yinsh();
+        YinshGame yinsh = new YinshGame();
         try {
-            yinsh.putRing('j', 4, Yinsh.color.BLACK);
+            yinsh.putRing('j', 4, YinshGame.GAMECOLOR.BLACK);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);
@@ -32,10 +32,10 @@ public class GameTest extends TestCase {
     }
 
     public void testDuplicateColor() throws Exception {
-        Yinsh yinsh = new Yinsh();
+        YinshGame yinsh = new YinshGame();
         try {
-            yinsh.putRing('j', 5, Yinsh.color.BLACK);
-            yinsh.putRing('j', 6, Yinsh.color.BLACK);
+            yinsh.putRing('j', 5, YinshGame.GAMECOLOR.BLACK);
+            yinsh.putRing('j', 6, YinshGame.GAMECOLOR.BLACK);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);

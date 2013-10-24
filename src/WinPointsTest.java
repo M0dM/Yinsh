@@ -4,41 +4,41 @@ import junit.framework.TestCase;
 public class WinPointsTest extends TestCase {
 
     public void testRemoveRow() {
-        Yinsh yinsh = new Yinsh();
-        yinsh.setIntersectionColor('e', 6, Yinsh.color.BLACK);
-        yinsh.setIntersectionState('e', 6, Yinsh.state.MARKER);
-        yinsh.setIntersectionColor('f', 7, Yinsh.color.BLACK);
-        yinsh.setIntersectionState('f', 7, Yinsh.state.MARKER);
-        yinsh.setIntersectionColor('g', 8, Yinsh.color.BLACK);
-        yinsh.setIntersectionState('g', 8, Yinsh.state.MARKER);
-        yinsh.setIntersectionColor('h', 9, Yinsh.color.BLACK);
-        yinsh.setIntersectionState('h', 9, Yinsh.state.MARKER);
-        yinsh.setIntersectionColor('i', 10, Yinsh.color.BLACK);
-        yinsh.setIntersectionState('i', 10, Yinsh.state.MARKER);
+        YinshGame yinsh = new YinshGame();
+        yinsh.setIntersectionColor('e', 6, YinshGame.GAMECOLOR.BLACK);
+        yinsh.setIntersectionState('e', 6, YinshGame.GAMESTATE.MARKERSTATE);
+        yinsh.setIntersectionColor('f', 7, YinshGame.GAMECOLOR.BLACK);
+        yinsh.setIntersectionState('f', 7, YinshGame.GAMESTATE.MARKERSTATE);
+        yinsh.setIntersectionColor('g', 8, YinshGame.GAMECOLOR.BLACK);
+        yinsh.setIntersectionState('g', 8, YinshGame.GAMESTATE.MARKERSTATE);
+        yinsh.setIntersectionColor('h', 9, YinshGame.GAMECOLOR.BLACK);
+        yinsh.setIntersectionState('h', 9, YinshGame.GAMESTATE.MARKERSTATE);
+        yinsh.setIntersectionColor('i', 10, YinshGame.GAMECOLOR.BLACK);
+        yinsh.setIntersectionState('i', 10, YinshGame.GAMESTATE.MARKERSTATE);
         yinsh.removeRow('e', 6, 'i', 10);
-        assertTrue(yinsh.getIntersectionColor('e', 6) == Yinsh.color.UNDEFINED
+        assertTrue(yinsh.getIntersectionColor('e', 6) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('e', 6) == null
-                && yinsh.getIntersectionColor('f', 7) == Yinsh.color.UNDEFINED
+                && yinsh.getIntersectionColor('f', 7) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('f', 7) == null
-                && yinsh.getIntersectionColor('g', 8) == Yinsh.color.UNDEFINED
+                && yinsh.getIntersectionColor('g', 8) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('g', 8) == null
-                && yinsh.getIntersectionColor('h', 9) == Yinsh.color.UNDEFINED
+                && yinsh.getIntersectionColor('h', 9) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('h', 9) == null
-                && yinsh.getIntersectionColor('i', 10) == Yinsh.color.UNDEFINED
+                && yinsh.getIntersectionColor('i', 10) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('i', 10) == null);
     }
 
     public void testRemoveRing() {
-        Yinsh yinsh = new Yinsh();
-        yinsh.setIntersectionColor('h', 10, Yinsh.color.BLACK);
-        yinsh.setIntersectionState('h', 10, Yinsh.state.RING);
-        yinsh.incrementRings(Yinsh.color.UNDEFINED);
-        yinsh.incrementRings(Yinsh.color.UNDEFINED);
-        int numberOfBlackPointsInit = yinsh.getPlayerPoints(Yinsh.color.BLACK);
+        YinshGame yinsh = new YinshGame();
+        yinsh.setIntersectionColor('h', 10, YinshGame.GAMECOLOR.BLACK);
+        yinsh.setIntersectionState('h', 10, YinshGame.GAMESTATE.RINGSTATE);
+        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);
+        yinsh.incrementRings(YinshGame.GAMECOLOR.UNDEFINED);
+        int nbOfBlackPointsInit = yinsh.getPlayerPoints(YinshGame.GAMECOLOR.BLACK);
         yinsh.removeRing('h', 10);
-        int numberOfBlackPointsFinale = yinsh.getPlayerPoints(Yinsh.color.BLACK);
-        assertTrue(yinsh.getIntersectionColor('h', 10) == Yinsh.color.UNDEFINED
+        int nbOfBlackPointsFinal = yinsh.getPlayerPoints(YinshGame.GAMECOLOR.BLACK);
+        assertTrue(yinsh.getIntersectionColor('h', 10) == YinshGame.GAMECOLOR.UNDEFINED
                 && yinsh.getIntersectionState('h', 10) == null
-                && numberOfBlackPointsFinale - numberOfBlackPointsInit == 1);
+                && nbOfBlackPointsFinal - nbOfBlackPointsInit == 1);
     }
 }

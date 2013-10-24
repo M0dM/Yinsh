@@ -8,17 +8,17 @@ public class InitializationTest extends TestCase {
     }
 
     public void testGameInitalized() throws Exception {
-        Yinsh yinsh = new Yinsh();
-        yinsh.putRing('b', 1, Yinsh.color.BLACK);
-        yinsh.putRing('c', 1, Yinsh.color.WHITE);
-        yinsh.putRing('a', 2, Yinsh.color.BLACK);
-        yinsh.putRing('c', 2, Yinsh.color.WHITE);
-        yinsh.putRing('a', 3, Yinsh.color.BLACK);
-        yinsh.putRing('c', 3, Yinsh.color.WHITE);
-        yinsh.putRing('a', 4, Yinsh.color.BLACK);
-        yinsh.putRing('c', 4, Yinsh.color.WHITE);
-        yinsh.putRing('a', 5, Yinsh.color.BLACK);
-        yinsh.putRing('c', 5, Yinsh.color.WHITE);
+        YinshGame yinsh = new YinshGame();
+        yinsh.putRing('b', 1, YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing('c', 1, YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing('a', 2, YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing('c', 2, YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing('a', 3, YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing('c', 3, YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing('a', 4, YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing('c', 4, YinshGame.GAMECOLOR.WHITE);
+        yinsh.putRing('a', 5, YinshGame.GAMECOLOR.BLACK);
+        yinsh.putRing('c', 5, YinshGame.GAMECOLOR.WHITE);
         assertTrue(yinsh.isInitialized());
     }
 

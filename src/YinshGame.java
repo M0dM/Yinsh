@@ -2,93 +2,93 @@ import java.util.HashMap;
 import java.util.Vector;
 
 
-public class Yinsh {
+public class YinshGame {
 
-    public enum color {BLACK, WHITE, UNDEFINED}
+    public enum GAMECOLOR {BLACK, WHITE, UNDEFINED}
 
-    public enum state {RING, MARKER}
+    public enum GAMESTATE {RINGSTATE, MARKERSTATE}
 
-    private color currentColor;
-    protected int numberOfRings;
-    private final HashMap<Integer, Vector<Intersection>> plate = new HashMap<Integer, Vector<Intersection>>();
-    private int numberOfWhiteRings;
-    private int numberOfBlackRings;
-    private final int[] ligneMin = {2, 1, 1, 1, 1, 2, 2, 3, 4, 5, 7};
-    private final int[] ligneMax = {5, 7, 8, 9, 10, 10, 11, 11, 11, 11, 10};
-    private int blackPoints = 0;
-    private int whitePoints = 0;
+    private GAMECOLOR m_currentColor;
+    protected int m_numberOfRings;
+    private final HashMap<Integer, Vector<Intersection>> m_plate = new HashMap<Integer, Vector<Intersection>>();
+    private int m_numberOfWhiteRings;
+    private int m_numberOfBlackRings;
+    private final int[] m_ligneMin = {2, 1, 1, 1, 1, 2, 2, 3, 4, 5, 7};
+    private final int[] m_ligneMax = {5, 7, 8, 9, 10, 10, 11, 11, 11, 11, 10};
+    private int m_blackPoints = 0;
+    private int m_whitePoints = 0;
 
-    public Yinsh() {
-        this.numberOfRings = 0;
-        this.numberOfBlackRings = 0;
-        this.numberOfWhiteRings = 0;
-        this.currentColor = null;
+    public YinshGame() {
+        m_numberOfRings = 0;
+        m_numberOfBlackRings = 0;
+        m_numberOfWhiteRings = 0;
+        m_currentColor = null;
         for (int i = 0; i < 10; i++) {
             Vector<Intersection> line = new Vector<Intersection>();
             initLineIntersections(line);
-            plate.put(i, line);
+            m_plate.put(i, line);
         }
     }
 
     void initLineIntersections(Vector<Intersection> line) {
         for (int i = 0; i < 10; i++) {
-            Intersection intersect = new Intersection(color.UNDEFINED, null);
+            Intersection intersect = new Intersection(GAMECOLOR.UNDEFINED, null);
             line.add(intersect);
         }
     }
-    void incrementPlayerPoints(color couleur){
-          if(couleur == color.BLACK){
-              blackPoints++;
+    void incrementPlayerPoints(GAMECOLOR couleur){
+          if(couleur == GAMECOLOR.BLACK){
+              m_blackPoints++;
           }else{
-              whitePoints++;
+              m_whitePoints++;
           }
     }
 
-    public int getPlayerPoints(color couleur){
+    public int getPlayerPoints(GAMECOLOR couleur){
         int points =0;
-        if(couleur == color.BLACK){
-            points = blackPoints;
+        if(couleur == GAMECOLOR.BLACK){
+            points = m_blackPoints;
         }else{
-            points = whitePoints;
+            points = m_whitePoints;
         }
         return points;
     }
-    public void setIntersectionColor(char col, int line, color color) {
-        plate.get(col - 'a').get(line - 1).setColor(color);
+    public void setIntersectionColor(char col, int line, GAMECOLOR color) {
+        m_plate.get(col - 'a').get(line - 1).setColor(color);
     }
-    public void setIntersectionState(char col, int line, state state) {
-        plate.get(col - 'a').get(line - 1).setState(state);
+    public void setIntersectionState(char col, int line, GAMESTATE state) {
+        m_plate.get(col - 'a').get(line - 1).setState(state);
     }
-    public color getIntersectionColor(char col, int line) {
-        return plate.get(col - 'a').get(line - 1).getColor();
+    public GAMECOLOR getIntersectionColor(char col, int line) {
+        return m_plate.get(col - 'a').get(line - 1).getColor();
     }
-    public state getIntersectionState(char col, int line) {
-        return plate.get(col - 'a').get(line - 1).getState();
+    public GAMESTATE getIntersectionState(char col, int line) {
+        return m_plate.get(col - 'a').get(line - 1).getState();
     }
-    public void setCurrentColor(color color) {
-        this.currentColor = color;
+    public void setCurrentColor(GAMECOLOR color) {
+        m_currentColor = color;
     }
-    public void incrementRings(color color) {
+    public void incrementRings(GAMECOLOR color) {
 
-        if (color == Yinsh.color.BLACK) {
-            numberOfBlackRings++;
+        if (color == GAMECOLOR.BLACK) {
+            m_numberOfBlackRings++;
         } else {
-            numberOfWhiteRings++;
+            m_numberOfWhiteRings++;
         }
-        numberOfRings++;
+        m_numberOfRings++;
     }
 
 
     void removeCol(char col, int lineInit, int lineFinale) {
         for (int j = lineInit; j < lineFinale; j++) {
-            setIntersectionColor(col, j, color.UNDEFINED);
+            setIntersectionColor(col, j, GAMECOLOR.UNDEFINED);
             setIntersectionState(col, j, null);
         }
     }
 
     void removeLine(int line, char colInit, char colFinale) {
         for (int i = (int) colInit; i < (int) colFinale; i++) {
-            setIntersectionColor((char) (i + 'a'), line, color.UNDEFINED);
+            setIntersectionColor((char) (i + 'a'), line, GAMECOLOR.UNDEFINED);
             setIntersectionState((char) (i + 'a'), line, null);
         }
     }
@@ -134,107 +134,107 @@ public class Yinsh {
     }
 
     private void resetIntersect(char col, int line) {
-        setIntersectionColor(col, line, color.UNDEFINED);
+        setIntersectionColor(col, line, GAMECOLOR.UNDEFINED);
         setIntersectionState(col, line, null);
     }
 
     public void removeRing(char col, int line) {
-        numberOfBlackRings--;
-        numberOfRings--;
-        if (getIntersectionColor(col, line) == color.BLACK) {
-            incrementPlayerPoints(color.BLACK);
+        m_numberOfBlackRings--;
+        m_numberOfRings--;
+        if (getIntersectionColor(col, line) == GAMECOLOR.BLACK) {
+            incrementPlayerPoints(GAMECOLOR.BLACK);
         } else {
-            incrementPlayerPoints(color.WHITE);
+            incrementPlayerPoints(GAMECOLOR.WHITE);
         }
         resetIntersect(col, line);
     }
 
-    public color currentColor() {
-        return this.currentColor;
+    public GAMECOLOR currentColor() {
+        return m_currentColor;
     }
 
-    public void putRing(char col, int ligne, color color) throws Exception {
+    public void putRing(char col, int ligne, GAMECOLOR color) throws Exception {
         if (!hasCoordinates(col, ligne)) {
             throw new Exception("Invalid coordinate.");
         } else {
             if (hasRing(col, ligne)) {
                 throw new Exception("Duplicate ring.");
             } else {
-                if (currentColor == color) {
+                if (m_currentColor == color) {
                     throw new Exception("Invalid color.");
                 } else {
-                    currentColor = color;
+                    m_currentColor = color;
                 }
-                numberOfRings++;
-                if (color == Yinsh.color.BLACK) {
-                    numberOfBlackRings++;
+                m_numberOfRings++;
+                if (color == GAMECOLOR.BLACK) {
+                    m_numberOfBlackRings++;
                 } else {
-                    numberOfWhiteRings++;
+                    m_numberOfWhiteRings++;
                 }
-                setIntersection(col, ligne, new Intersection(color, state.RING));
+                setIntersection(col, ligne, new Intersection(color, GAMESTATE.RINGSTATE));
             }
         }
     }
 
-    public void putMarker(char col, int ligne, color color) throws Exception {
+    public void putMarker(char col, int ligne, GAMECOLOR color) throws Exception {
 
         if (hasRingWithWrongColor(col, ligne, color)) {
             throw new Exception("Invalid ring color.");
         } else if (hasRing(col, ligne)) {
-            setIntersection(col, ligne, new Intersection(color, state.MARKER));
+            setIntersection(col, ligne, new Intersection(color, GAMESTATE.MARKERSTATE));
         } else {
             throw new Exception("No ring matched");
         }
     }
 
     public boolean hasRing(char col, int ligne) {
-        return plate.get((int) col - 'a').get(ligne - 1).getState() == Yinsh.state.RING;
+        return m_plate.get((int) col - 'a').get(ligne - 1).getState() == GAMESTATE.RINGSTATE;
     }
 
-    private boolean hasRingWithWrongColor(char col, int ligne, color color) {
-        return plate.get((int) col - 'a').get(ligne - 1).getState() == Yinsh.state.RING &&
-                plate.get((int) col - 'a').get(ligne - 1).getColor() != color;
+    private boolean hasRingWithWrongColor(char col, int ligne, GAMECOLOR color) {
+        return m_plate.get((int) col - 'a').get(ligne - 1).getState() == GAMESTATE.RINGSTATE &&
+                m_plate.get((int) col - 'a').get(ligne - 1).getColor() != color;
     }
 
     boolean hasCoordinates(char col, int ligne) {
-        return (colHasLigne(col, ligne));
+        return (isLineInCol(col, ligne));
     }
 
-    private boolean colHasLigne(char col, int ligne) {
+    private boolean isLineInCol(char col, int ligne) {
         Boolean colHasLigne = true;
         if (col < 'a' || col > 'k')
             colHasLigne = false;
-        if (ligne < ligneMin[(int) col - 'a'] || ligne > ligneMax[(int) col - 'a'])
+        if (ligne < m_ligneMin[(int) col - 'a'] || ligne > m_ligneMax[(int) col - 'a'])
             colHasLigne = false;
         return colHasLigne;
     }
 
     void setIntersection(char col, int ligne, Intersection value) {
-        plate.get((int) col - 'a').get(ligne - 1).setState(value.getState());
-        plate.get((int) col - 'a').get(ligne - 1).setColor(value.getColor());
+        m_plate.get((int) col - 'a').get(ligne - 1).setState(value.getState());
+        m_plate.get((int) col - 'a').get(ligne - 1).setColor(value.getColor());
     }
 
     public boolean isInitialized() {
-        return numberOfBlackRings == 5 && numberOfWhiteRings == 5;
+        return m_numberOfBlackRings == 5 && m_numberOfWhiteRings == 5;
     }
 
     void setInitColorForSameColomn(char colInit, int lineInit, int lineFinale) {
         for (int j = lineInit; j < lineFinale; j++)
-            plate.get((int) colInit - 'a').get(j).setColor(getOppositeColor(plate.get((int) colInit - 'a').get(j).getColor()));
+            m_plate.get((int) colInit - 'a').get(j).setColor(getOppositeColor(m_plate.get((int) colInit - 'a').get(j).getColor()));
     }
 
     void setInitColorForSameLine(char colInit, char colFinale, int lineInit) {
         for (int i = (int) colInit; i < (int) colFinale; i++)
-            plate.get((int) colInit - 'a').get(lineInit - 1).setColor(getOppositeColor(plate.get((int) colInit - 'a').get(lineInit - 1).getColor()));
+            m_plate.get((int) colInit - 'a').get(lineInit - 1).setColor(getOppositeColor(m_plate.get((int) colInit - 'a').get(lineInit - 1).getColor()));
     }
 
-    public void move_ring(char colInit, int lineInit, char colFinale, int lineFinale) throws Exception {
+    public void moveRing(char colInit, int lineInit, char colFinale, int lineFinale) throws Exception {
         if (hasRing(colFinale, lineFinale)) {
             throw new Exception("Ring already in intersection.");
         } else {
-            if (sameColomnOrLine(colInit, lineInit, colFinale, lineFinale)) {
-                setIntersectionState(colInit, lineInit, state.MARKER);
-                setIntersectionState(colFinale, lineFinale, state.RING);
+            if (isSameColomnOrLine(colInit, lineInit, colFinale, lineFinale)) {
+                setIntersectionState(colInit, lineInit, GAMESTATE.MARKERSTATE);
+                setIntersectionState(colFinale, lineFinale, GAMESTATE.RINGSTATE);
                 setIntersectionColor(colFinale, lineFinale, getIntersectionColor(colInit, lineInit));
                 if (colInit == colFinale)
                     setInitColorForSameColomn(colInit, lineInit, lineFinale);
@@ -246,15 +246,15 @@ public class Yinsh {
         }
     }
 
-    private color getOppositeColor(color color) {
-        Yinsh.color oppColor = Yinsh.color.WHITE;
-        if (color == Yinsh.color.WHITE) {
-            oppColor = Yinsh.color.BLACK;
+    private GAMECOLOR getOppositeColor(GAMECOLOR color) {
+        GAMECOLOR oppColor = GAMECOLOR.WHITE;
+        if (color == GAMECOLOR.WHITE) {
+            oppColor = GAMECOLOR.BLACK;
         }
         return oppColor;
     }
 
-    private boolean sameColomnOrLine(char colInit, int lineInit, char colFinale, int lineFinale) {
+    private boolean isSameColomnOrLine(char colInit, int lineInit, char colFinale, int lineFinale) {
         return colInit == colFinale || lineInit == lineFinale;
     }
 

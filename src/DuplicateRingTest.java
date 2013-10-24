@@ -8,10 +8,10 @@ public class DuplicateRingTest extends TestCase {
     }
 
     public void testDuplicateRing() throws Exception {
-        Yinsh yinsh = new Yinsh();
-        yinsh.putRing('a', 2, Yinsh.color.BLACK);
+        YinshGame yinsh = new YinshGame();
+        yinsh.putRing('a', 2, YinshGame.GAMECOLOR.BLACK);
         try {
-            yinsh.putRing('a', 2, Yinsh.color.WHITE);
+            yinsh.putRing('a', 2, YinshGame.GAMECOLOR.WHITE);
             assertTrue(false);
         } catch (Exception exception) {
             assertTrue(true);
