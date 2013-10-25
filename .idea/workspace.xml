@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54c08625-fde5-4db6-95a7-bfddb112ac36" name="Default" comment="Modifications to add application class.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Coordinates.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.java" afterPath="$PROJECT_DIR$/src/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ColorTest.java" afterPath="$PROJECT_DIR$/src/ColorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DuplicateRingTest.java" afterPath="$PROJECT_DIR$/src/DuplicateRingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FirstMovesTest.java" afterPath="$PROJECT_DIR$/src/FirstMovesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameTest.java" afterPath="$PROJECT_DIR$/src/GameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InitializationTest.java" afterPath="$PROJECT_DIR$/src/InitializationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListAvailableMovesTest.java" afterPath="$PROJECT_DIR$/src/ListAvailableMovesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MarkerTest.java" afterPath="$PROJECT_DIR$/src/MarkerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WinPointsTest.java" afterPath="$PROJECT_DIR$/src/WinPointsTest.java" />
+    <list default="true" id="54c08625-fde5-4db6-95a7-bfddb112ac36" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Coordinates.java" afterPath="$PROJECT_DIR$/src/Coordinates.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/YinshGame.java" afterPath="$PROJECT_DIR$/src/YinshGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Yinsh.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382608763255" ignored="false" />
+    <file path="/Dummy.txt" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382728011410" ignored="false" />
     <file path="/Yinsh.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382602170708" ignored="false" />
     <file path="/Intersection.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382602708370" ignored="false" />
-    <file path="/YinshGame.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382608390780" ignored="false" />
+    <file path="/YinshGame.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382728790210" ignored="false" />
     <file path="/WinPointsTest.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382607574914" ignored="false" />
     <file path="$PROJECT_DIR$/testCoverage/.css/coverage.css" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382603194758" ignored="false" />
     <file path="/Application.java" changelist="54c08625-fde5-4db6-95a7-bfddb112ac36" time="1382606939786" ignored="false" />
@@ -95,10 +87,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ColorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ColorTest.java">
+      <file leaf-file-name="Coordinates.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Coordinates.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="65" selection-start="268" selection-end="268" vertical-scroll-proportion="-3.0">
+            <state line="8" column="15" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,84 +99,17 @@
       <file leaf-file-name="GameTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="66" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-10.333333">
+            <state line="25" column="21" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarkerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MarkerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="44" selection-start="5531" selection-end="5531" vertical-scroll-proportion="2.137255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WinPointsTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WinPointsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="82" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InitializationTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InitializationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="66" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.5294118">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListAvailableMovesTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ListAvailableMovesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="0.53125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DuplicateRingTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DuplicateRingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="66" selection-start="295" selection-end="295" vertical-scroll-proportion="-2.1960785">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirstMovesTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FirstMovesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="66" selection-start="220" selection-end="220" vertical-scroll-proportion="-2.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YinshGame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="YinshGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="0" selection-start="6051" selection-end="6051" vertical-scroll-proportion="-1.8431373">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#335#366#0" expanded="true" />
-                <element signature="e#1048#1062#0" expanded="true" />
-              </folding>
+            <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.13858695">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -209,10 +134,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Yinsh.java" />
         <option value="$PROJECT_DIR$/src/Intersection.java" />
-        <option value="$PROJECT_DIR$/src/Coordinates.java" />
         <option value="$PROJECT_DIR$/src/WinPointsTest.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
-        <option value="$PROJECT_DIR$/src/YinshGame.java" />
         <option value="$PROJECT_DIR$/src/ColorTest.java" />
         <option value="$PROJECT_DIR$/src/DuplicateRingTest.java" />
         <option value="$PROJECT_DIR$/src/FirstMovesTest.java" />
@@ -220,6 +143,8 @@
         <option value="$PROJECT_DIR$/src/InitializationTest.java" />
         <option value="$PROJECT_DIR$/src/ListAvailableMovesTest.java" />
         <option value="$PROJECT_DIR$/src/MarkerTest.java" />
+        <option value="$PROJECT_DIR$/src/Coordinates.java" />
+        <option value="$PROJECT_DIR$/src/YinshGame.java" />
       </list>
     </option>
   </component>
@@ -237,13 +162,52 @@
             <id />
           </State>
           <State>
+            <id>Abstraction issues</id>
+          </State>
+          <State>
             <id>Android Lint</id>
           </State>
           <State>
-            <id>DOM issuesJavaScript</id>
+            <id>CDI(Contexts and Dependency Injection) issues</id>
           </State>
           <State>
-            <id>GeneralJavaScript</id>
+            <id>Class metrics</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Cloning issues</id>
+          </State>
+          <State>
+            <id>Code maturity issues</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Data flow issues</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Declaration redundancyGroovy</id>
+          </State>
+          <State>
+            <id>DeclarationGroovy</id>
+          </State>
+          <State>
+            <id>Encapsulation issues</id>
+          </State>
+          <State>
+            <id>Finalization issues</id>
+          </State>
+          <State>
+            <id>FlexUnit inspections</id>
+          </State>
+          <State>
+            <id>General</id>
           </State>
           <State>
             <id>Google Web Toolkit issues</id>
@@ -252,36 +216,93 @@
             <id>Groovy</id>
           </State>
           <State>
-            <id>HTML</id>
+            <id>Guice Inspections</id>
           </State>
           <State>
-            <id>JavaScript</id>
+            <id>Inheritance issues</id>
           </State>
           <State>
-            <id>JavaScript validity issuesJavaScript</id>
+            <id>Initialization issues</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>JBoss Seam issues</id>
+          </State>
+          <State>
+            <id>JPA issues</id>
+          </State>
+          <State>
+            <id>JUnit issues</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>Java language level issues</id>
+          </State>
+          <State>
+            <id>Java language level migration aids</id>
           </State>
           <State>
             <id>Javadoc issues</id>
           </State>
           <State>
-            <id>Plugin DevKit</id>
+            <id>Logging issues</id>
           </State>
           <State>
-            <id>Portability issues</id>
+            <id>Method MetricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metrics</id>
+          </State>
+          <State>
+            <id>Naming conventions</id>
+          </State>
+          <State>
+            <id>Numeric issues</id>
+          </State>
+          <State>
+            <id>Pattern Validation</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Security issues</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+          <State>
+            <id>TestNG</id>
           </State>
           <State>
             <id>Threading issues</id>
           </State>
           <State>
-            <id>Threading issuesGroovy</id>
+            <id>Visibility issues</id>
+          </State>
+          <State>
+            <id>Web Services</id>
           </State>
           <State>
             <id>XML</id>
           </State>
+          <State>
+            <id>toString() issues</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>HTML</id>
+            <id>MethodCount</id>
           </State>
         </selected-state>
       </profile-state>
@@ -315,8 +336,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,10 +388,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -434,19 +456,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -473,6 +482,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -566,12 +588,16 @@
       <created>1382605804614</created>
       <updated>1382605804614</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modifications to sole errors since adding application class.">
+      <created>1382609146367</created>
+      <updated>1382609146367</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -587,18 +613,18 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6703755" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2117117" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45201668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2117117" sideWeight="0.5479833" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45201668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6703755" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -643,7 +669,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifications to add application class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifications to sole errors since adding application class." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -662,6 +688,7 @@
     <MESSAGE value="updating test coverage analysing" />
     <MESSAGE value="Adding Application well for class integration" />
     <MESSAGE value="Modifications to add application class." />
+    <MESSAGE value="Modifications to sole errors since adding application class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -671,6 +698,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/DuplicateRingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="66" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FirstMovesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="66" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="0" selection-start="6051" selection-end="6051" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testCoverage/.empty/.classes/ColorTest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="73" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.3534884">
@@ -678,16 +726,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Intersection.java">
+    <entry file="file://$PROJECT_DIR$/src/WinPointsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+        <state line="17" column="42" selection-start="984" selection-end="984" vertical-scroll-proportion="0.19280575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coordinates.java">
+    <entry file="file://$PROJECT_DIR$/src/MarkerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+        <state line="100" column="44" selection-start="5531" selection-end="5531" vertical-scroll-proportion="0.29064748">
           <folding />
         </state>
       </provider>
@@ -701,67 +749,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ColorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="65" selection-start="268" selection-end="268" vertical-scroll-proportion="-3.0">
+        <state line="9" column="65" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DuplicateRingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="66" selection-start="295" selection-end="295" vertical-scroll-proportion="-2.1960785">
+        <state line="10" column="66" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FirstMovesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="66" selection-start="220" selection-end="220" vertical-scroll-proportion="-2.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="66" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-10.333333">
+        <state line="6" column="66" selection-start="220" selection-end="220" vertical-scroll-proportion="0.11942446">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InitializationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="66" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.5294118">
+        <state line="10" column="66" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
+    <entry file="file://$PROJECT_DIR$/src/Intersection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="0" selection-start="6051" selection-end="6051" vertical-scroll-proportion="-1.8431373">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#335#366#0" expanded="true" />
-            <element signature="e#1048#1062#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WinPointsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MarkerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="44" selection-start="5531" selection-end="5531" vertical-scroll-proportion="2.137255">
+        <state line="15" column="19" selection-start="337" selection-end="337" vertical-scroll-proportion="0.36690646">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ListAvailableMovesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="0.53125">
+        <state line="12" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="0.024460431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Coordinates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="15" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="21" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/YinshGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.13858695">
           <folding />
         </state>
       </provider>

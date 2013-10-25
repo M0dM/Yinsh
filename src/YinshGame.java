@@ -48,11 +48,9 @@ public class YinshGame {
     }
 
     public int getPlayerPoints(GAMECOLOR couleur){
-        int points =0;
+        int points = m_whitePoints;
         if(couleur == GAMECOLOR.BLACK){
             points = m_blackPoints;
-        }else{
-            points = m_whitePoints;
         }
         return points;
     }
@@ -165,7 +163,7 @@ public class YinshGame {
     public void putRing(Coordinates coordinates, GAMECOLOR color) throws Exception {
         char col = coordinates.m_col;
         int ligne = coordinates.m_line;
-        if (!hasCoordinates(col, ligne)) {
+        if (isNoLineInCol(col, ligne)) {
             throw new Exception("Invalid coordinate.");
         } else {
             if (hasRing(col, ligne)) {
@@ -208,17 +206,13 @@ public class YinshGame {
                 m_plate.get((int) col - 'a').get(ligne - 1).getColor() != color;
     }
 
-    boolean hasCoordinates(char col, int ligne) {
-        return (isLineInCol(col, ligne));
-    }
-
-    private boolean isLineInCol(char col, int ligne) {
-        Boolean colHasLigne = true;
+    private boolean isNoLineInCol(char col, int ligne) {
+        Boolean colHasNoLine = false;
         if (col < 'a' || col > 'k')
-            colHasLigne = false;
+            colHasNoLine = true;
         if (ligne < m_ligneMin[(int) col - 'a'] || ligne > m_ligneMax[(int) col - 'a'])
-            colHasLigne = false;
-        return colHasLigne;
+            colHasNoLine = true;
+        return colHasNoLine;
     }
 
     void setIntersection(char col, int ligne, Intersection value) {
